@@ -1,0 +1,14 @@
+﻿<CoveredIndividualGrp>
+	<CoveredIndividualName>
+		<PersonFirstNm>@@PersonFirstNm@@</PersonFirstNm>
+		<PersonMiddleNm>@@PersonMiddleNm@@</PersonMiddleNm>
+		<PersonLastNm>@@PersonLastNm@@</PersonLastNm>
+		<SuffixNm>@@SuffixNm@@</SuffixNm>
+	</CoveredIndividualName>
+	<PersonNameControlTxt>@@PersonNameControlTxt@@</PersonNameControlTxt>
+	<irs:TINRequestTypeCd>INDIVIDUAL_TIN</irs:TINRequestTypeCd>
+	<irs:SSN>@@SSN@@</irs:SSN>
+	<BirthDt>@@BirthDt@@</BirthDt>
+	<CoveredIndividualAnnualInd>@@CoveredIndividualAnnualInd@@</CoveredIndividualAnnualInd>
+	@@CoveredIndividualMonthlyIndGrp@@
+</CoveredIndividualGrp>

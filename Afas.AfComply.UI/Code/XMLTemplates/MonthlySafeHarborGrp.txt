@@ -1,0 +1,14 @@
+﻿<MonthlySafeHarborGrp>
+	<JanSafeHarborCd>@@JanSafeHarborCd@@</JanSafeHarborCd>
+	<FebSafeHarborCd>@@FebSafeHarborCd@@</FebSafeHarborCd>
+	<MarSafeHarborCd>@@MarSafeHarborCd@@</MarSafeHarborCd>
+	<AprSafeHarborCd>@@AprSafeHarborCd@@</AprSafeHarborCd>
+	<MaySafeHarborCd>@@MaySafeHarborCd@@</MaySafeHarborCd>
+	<JunSafeHarborCd>@@JunSafeHarborCd@@</JunSafeHarborCd>
+	<JulSafeHarborCd>@@JulSafeHarborCd@@</JulSafeHarborCd>
+	<AugSafeHarborCd>@@AugSafeHarborCd@@</AugSafeHarborCd>
+	<SepSafeHarborCd>@@SepSafeHarborCd@@</SepSafeHarborCd>
+	<OctSafeHarborCd>@@OctSafeHarborCd@@</OctSafeHarborCd>
+	<NovSafeHarborCd>@@NovSafeHarborCd@@</NovSafeHarborCd>
+	<DecSafeHarborCd>@@DecSafeHarborCd@@</DecSafeHarborCd>
+</MonthlySafeHarborGrp>

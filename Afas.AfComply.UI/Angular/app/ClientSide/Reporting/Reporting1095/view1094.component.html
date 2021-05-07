@@ -1,0 +1,1042 @@
+﻿<div *ngIf="view1094" >
+    <table style="width: 100%;">
+        <tr style="font-weight: bold; font-size: 10px;">
+            <th style="width:25%;"></th>
+            <th style="width:25%;"></th>
+            <th style="width:25%;"></th>
+            <th style="width:25%;"></th>
+        </tr>
+        <tr>
+            <td colspan="4" style="border:solid">
+                <label style="background-color:black; color:white;font-weight:bolder; text-decoration-style:solid">Part I </label>
+                <label>Applicable Large Employer Member (ALE Member)</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <label id="lbl">1 Name of ALE Member (Employer)</label>
+                <br />
+                <input type="text" style="width: 100%; padding: 5px;" [ngModel]="view1094?.EmployerName" [disabled]=true />
+            </td>
+            <td colspan="2">
+                <label id="lbl">2 Employer identification number (EIN)</label>
+                <br />
+                <input type="text" style="width: 98%; padding: 5px;" [ngModel]="view1094?.EIN" [disabled]=true />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <label id="lbl">3 Street address (including room or suite no.)</label>
+                <br />
+                <input type="text" style="width: 99%; padding: 5px;" [ngModel]="view1094?.Address" [disabled]=true/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <label id="lbl">4 City or town</label>
+                <br />
+                <input type="text" style="width:100%; padding: 5px;" [ngModel]="view1094?.City" [disabled]=true/>
+            </td>
+            <td colspan="1">
+                <label id="lbl">5 State or province</label>
+                <br />
+                <input type="text" style="width: 100%; padding: 5px;" [ngModel]="view1094?.State" [disabled]=true/>
+            </td>
+            <td colspan="1">
+                <label id="lbl">6 Country and ZIP or foreign postal code</label>
+                <br />
+                <input type="text" style="width:96%; padding: 5px;" [ngModel]="view1094?.ZipCode" [disabled]=true/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <label id="lbl">7 Name of person to contact</label>
+                <br />
+                <input type="text" style="width: 100%; padding: 5px;" [ngModel]="view1094?.IrsContactName"[disabled]=true />
+            </td>
+            <td colspan="1">
+                <label id="lbl">8 Contact telephone number</label>
+                <br />
+                <input type="text" style="width: 96%; padding: 5px;" [ngModel]="view1094?.IrsContactPhone " [disabled]=true/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <label id="lbl">9 Name of Designated Government Entity (only if applicable) </label>
+                <br />
+                <input type="text" style="width: 100%; padding: 5px;" [ngModel]="view1094?.DgeName" [disabled]=true/>
+            </td>
+
+            <td colspan="1">
+                <label id="lbl">10 Employer identification number (EIN)</label>
+                <br />
+                <input type="text" style="width: 96%; padding: 5px;" [ngModel]="view1094?.DgeEIN" [disabled]=true/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <label id="lbl">11 Street address (including room or suite no.)</label>
+                <br />
+                <input type="text" style="width: 99%; padding: 5px;" [ngModel]="view1094?.DgeAddress" [disabled]=true/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <label id="lbl">12 City or town</label>
+                <br />
+                <input type="text" style="width: 100%; padding: 5px;" [ngModel]="view1094?.DgeCity" [disabled]=true/>
+            </td>
+            <td colspan="1">
+                <label id="lbl">13 State or province</label>
+                <br />
+                <input type="text" style="width:100%; padding: 5px;" [ngModel]="view1094?.DgeState" [disabled]=true />
+            </td>
+            <td colspan="1">
+                <label  id="lbl">14 Country and ZIP or foreign postal code</label>
+                <br />
+                <input type="text" style="width:96%; padding: 5px;" [ngModel]="view1094?.DgeZipCode" [disabled]=true/>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="3">
+                <label id="lbl">15 Name of person to contact</label>
+                <br />
+                <input type="text" style="width:100%; padding: 5px;" [ngModel]="view1094?.DgeContactName" [disabled]=true/>
+            </td>
+            <td colspan="1">
+                <label id="lbl">16 Contact telephone number</label>
+                <br />
+                <input type="text" style="width: 96%; padding: 5px;" [ngModel]="view1094?.DgeContactPhone" [disabled]=true/>
+            </td>
+        </tr>
+
+
+        <tr style="background-color:lightslategrey;color:black">
+            <td colspan="3">
+                <label style="color:black">17 Reserved.</label>
+            </td>
+            <td>
+                <input type="checkbox" disabled>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <label>18 Total number of Forms 1095-C submitted with this transmittal </label>
+            </td>
+            <td></td>
+            <td>
+                <input type="text" style="width: 96%; padding: 5px;" [ngModel]="view1094?.Total1095Forms" [disabled]=true/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <label> 19 Is this the authoritative transmittal for this ALE Member If "Yes" check the box and continue. If "No" see instructions</label>
+            </td>
+            <td></td>
+            <td>
+                <input type="checkbox" [ngModel]="view1094.IsAuthoritiveTransmission" [disabled]=true>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" style="border:solid">
+                <label style="background-color:black; color:white;font-weight:bolder ">Part II </label>
+                <label>ALE Member Information</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <label> 20 Total number of Forms 1095 C filed by and or on behalf of ALE Member</label>
+            </td>
+            <td></td>
+            <td>
+                <input type="text" style="width:99%; padding: 5px;" [ngModel]="view1094.Total1095Forms" [disabled]=true />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <label>21 Is ALE Member a member of an Aggregated ALE Group ? </label>
+                <br />
+                <label>If “No,” do not complete Part IV.</label>
+            </td>
+            <td></td>
+            <td style="align-content:flex-end">
+                <input type="checkbox" name="tc1" [ngModel]="view1094.IsAggregatedAleGroup"[disabled]=true><label>Yes</label>
+                <input type="checkbox" name="tc2" [ngModel]="!view1094.IsAggregatedAleGroup"[disabled]=true><label>No</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <label>22 Certifications of Eligibility (select all that apply): </label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1">
+                <input type="checkbox"  ngModel><label>A.Qualifying Offer Method</label>
+            </td>
+            <td colspan="1">
+                <input type="checkbox" [disabled]=true ngModel><label>B. Reserved</label>
+            </td>
+            <td colspan="1">
+                <input type="checkbox" [disabled]=true ngModel><label>C. Reserved</label>
+            </td>
+            <td colspan="1">
+                <input type="checkbox" ngModel><label>D. 98% Offer Method</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                Under penalties of perjury, I declare that I have examined this return and accompanying documents, and to the best of my knowledge and belief, they are true, correct, and complete.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                ▲<input type="text" style="width:30%; padding: 5px;" placeholder="Signature:" [ngModel]="view1094.Signature" />
+                ▲<input type="text" style="width:30%; padding: 5px;" placeholder="Title:" [ngModel]="view1094.Title" />
+                ▲<input type="text" style="width:30%; padding: 5px;" placeholder="Date:" [ngModel]="view1094.Date" />
+            </td>
+        </tr>
+    </table>
+    <table style="width: 100%; border-color:black;border-width:thick">
+        <tr style="font-weight: bold; font-size: 10px;">
+            <th style="width:16%;"></th>
+            <th style="width:20%;"></th>
+            <th style="width:16%;"></th>
+            <th style="width:16%;"></th>
+            <th style="width:16%;"></th>
+            <th style="width:16%;"></th>
+        </tr>
+        <tr>
+            <td colspan="6" style="border:solid">
+                <label style="background-color:black; color:white;font-weight:bolder ">Part III </label>
+                <label>ALE Member Information—Monthly</label>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <table>
+                    <tr>
+                        <td colspan="2">
+                            (a) Minimum Essential Coverage
+                            Offer Indicator
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%">
+                            Yes
+                        </td>
+                        <td style="width:10%">
+                            No
+                        </td>
+                        <td style="width:5%">
+                            %
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                (b) Section 4980H Full-Time Employee Count for ALE Member
+            </td>
+            <td>
+                (c) Total Employee Count for ALE Member
+            </td>
+            <td>
+                (d) Aggregated Group Indicator
+            </td>
+            <td>
+                (e) Reserved
+            </td>
+        </tr>
+       
+        <tr>
+            <td>
+                <label>
+                    23 All 12 Months
+                </label>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td style="width:10%">
+                            <input type="checkbox" [disabled]=true [ngModel]="this.Part3All12Yes">
+                        </td>
+                        <td style="width:10%">
+                            <input type="checkbox" [disabled]=true  [ngModel]="this.Part3All12No">
+                        </td>
+                        <td style="width:5%">
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;"  [disabled]=true />
+            </td>
+            <td>
+
+                <input type="text" style="padding: 5px;" [disabled]=true  />
+            </td>
+            <td style="align-items:flex-end">
+                <label>   </label>
+                <input type="checkbox" style="align-self:center" [ngModel]="view1094.IsAggregatedAleGroup" [disabled]=true>
+            </td>
+            <td>
+
+                <input type="text" style="padding: 5px;"   [disabled]=true  />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    24 Jan
+                </label>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td style="width:10%">
+                            <input type="checkbox"  [disabled]=true [ngModel]="this.Part3All12Yes ? false:this.employerPart3[0]?.MinimumEssentialCoverageOfferIndicator">
+                        </td>
+                        <td style="width:10%">
+                            <input type="checkbox"  [disabled]=true [ngModel]="this.Part3All12No ? false: !this.employerPart3[0]?.MinimumEssentialCoverageOfferIndicator">
+                        </td>
+                        <td style="width:5%">     
+                           <input type="text" style="width:100%" [disabled]=true [ngModel]="this.employerPart3[1]?.MEC95" color="this.employerPart3[0]?.MinimumEssentialCoverageOfferIndicator ? 'red'  : 'green'" >
+                         </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [ngModel]="this.employerPart3[0]?.FullTimeEmployeeCount" [disabled]=true/>
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [ngModel]="this.employerPart3[0]?.TotalEmployeeCount" [disabled]=true />
+            </td>
+            <td>
+
+                <input type="checkbox" [disabled]=true  [ngModel]="this.Part3All12AGI ? true: employerPart3[0]?.AggregatedGroupIndicator">
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [ngModel]="employerPart3[0]?.address" [disabled]=true />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    25 Feb
+                </label>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td style="width:10%">
+                            <input type="checkbox"  [disabled]=true [ngModel]="this.Part3All12Yes ? false:employerPart3[1]?.MinimumEssentialCoverageOfferIndicator">
+                        </td>
+                        <td style="width:10%">
+                            <input type="checkbox"  [disabled]=true [ngModel]="this.Part3All12No ? false:!employerPart3[1]?.MinimumEssentialCoverageOfferIndicator">
+                        </td>
+                        <td style="width:5%">
+                            <input type="text" [disabled]=true [ngModel]="this.employerPart3[1]?.MEC95" style="width:100%">       
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [ngModel]="employerPart3[1]?.FullTimeEmployeeCount"  [disabled]=true/>
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [ngModel]="employerPart3[1]?.TotalEmployeeCount"  [disabled]=true/>
+            </td>
+            <td>
+                <input type="checkbox" [disabled]=true  [ngModel]="this.Part3All12AGI ? true: employerPart3[1]?.AggregatedGroupIndicator">
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [ngModel]="employerPart3[1]?.address"  [disabled]=true/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    26 Mar
+                </label>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td style="width:10%">
+                            <input type="checkbox"  [disabled]=true [ngModel]="this.Part3All12Yes ? false:employerPart3[2]?.MinimumEssentialCoverageOfferIndicator">
+                        </td>
+                        <td style="width:10%">
+                            <input type="checkbox"  [disabled]=true [ngModel]="this.Part3All12No ? false:!employerPart3[2]?.MinimumEssentialCoverageOfferIndicator">
+                        </td>
+                        <td style="width:5%">
+                            <input type="text" [disabled]=true [ngModel]="this.employerPart3[2]?.MEC95" style="width:100%">       
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [ngModel]="employerPart3[2]?.FullTimeEmployeeCount"  [disabled]=true/>
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [ngModel]="employerPart3[2]?.TotalEmployeeCount" [disabled]=true />
+            </td>
+            <td>
+                <input type="checkbox"  [disabled]=true [ngModel]="this.Part3All12AGI ? true: employerPart3[2]?.AggregatedGroupIndicator">
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [ngModel]="employerPart3[2]?.address" [disabled]=true />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    27 Apr
+                </label>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td style="width:10%">
+                            <input type="checkbox"  [disabled]=true [ngModel]="this.Part3All12Yes ? false:employerPart3[3]?.MinimumEssentialCoverageOfferIndicator">
+                        </td>
+                        <td style="width:10%">
+                            <input type="checkbox" [disabled]=true  [ngModel]="this.Part3All12No ? false:!employerPart3[3]?.MinimumEssentialCoverageOfferIndicator">
+                        </td>
+                        <td style="width:5%">
+                            <input type="text" [disabled]=true [ngModel]="this.employerPart3[3]?.MEC95" style="width:100%">       
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [ngModel]="employerPart3[3]?.FullTimeEmployeeCount"  [disabled]=true/>
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [ngModel]="employerPart3[3]?.TotalEmployeeCount"  [disabled]=true/>
+            </td>
+            <td>
+                <input type="checkbox"  [disabled]=true  [ngModel]="this.Part3All12AGI ? true: employerPart3[3]?.AggregatedGroupIndicator">
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [ngModel]="employerPart3[3]?.address"  [disabled]=true/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    28 May
+                </label>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td style="width:10%">
+                            <input type="checkbox" [disabled]=true  [ngModel]="this.Part3All12Yes ? false:employerPart3[4]?.MinimumEssentialCoverageOfferIndicator">
+                        </td>
+                        <td style="width:10%">
+                            <input type="checkbox" [disabled]=true  [ngModel]="this.Part3All12No ? false:!employerPart3[4]?.MinimumEssentialCoverageOfferIndicator">
+                        </td>
+                        <td style="width:5%">
+                            <input type="text" [disabled]=true [ngModel]="this.employerPart3[4]?.MEC95" style="width:100%">       
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [disabled]=true  [ngModel]="employerPart3[4]?.FullTimeEmployeeCount" />
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;"  [disabled]=true [ngModel]="employerPart3[4]?.TotalEmployeeCount" />
+            </td>
+            <td>
+                <input type="checkbox"  [disabled]=true [ngModel]="this.Part3All12AGI ? true: employerPart3[4]?.AggregatedGroupIndicator">
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [disabled]=true  [ngModel]="employerPart3[4]?.address" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    29 June
+                </label>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td style="width:10%">
+                            <input type="checkbox"  [disabled]=true [ngModel]="this.Part3All12Yes ? false:employerPart3[5]?.MinimumEssentialCoverageOfferIndicator">
+                        </td>
+                        <td style="width:10%">
+                            <input type="checkbox"  [disabled]=true [ngModel]="this.Part3All12No ? false:!employerPart3[5]?.MinimumEssentialCoverageOfferIndicator">
+                        </td>
+                        <td style="width:5%">
+                            <input type="text" [disabled]=true [ngModel]="this.employerPart3[5]?.MEC95" style="width:100%">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [disabled]=true  [ngModel]="employerPart3[5]?.FullTimeEmployeeCount" />
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;"  [disabled]=true [ngModel]="employerPart3[5]?.TotalEmployeeCount" />
+            </td>
+            <td>
+                <input type="checkbox"  [disabled]=true [ngModel]="this.Part3All12AGI ? true: employerPart3[5]?.AggregatedGroupIndicator">
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;"  [disabled]=true [ngModel]="employerPart3[5]?.address" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    30 July
+                </label>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td style="width:10%">
+                            <input type="checkbox"  [disabled]=true  [ngModel]="this.Part3All12Yes ? false:employerPart3[6]?.MinimumEssentialCoverageOfferIndicator">
+                        </td>
+                        <td style="width:10%">
+                            <input type="checkbox"  [disabled]=true  [ngModel]="this.Part3All12No ? false:!employerPart3[6]?.MinimumEssentialCoverageOfferIndicator">
+                        </td>
+                        <td style="width:5%">
+                            <input type="text" [disabled]=true [ngModel]="this.employerPart3[6]?.MEC95" style="width:100%">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [ngModel]="employerPart3[6]?.FullTimeEmployeeCount" [disabled]=true/>
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [ngModel]="employerPart3[6]?.TotalEmployeeCount"[disabled]=true />
+            </td>
+            <td>
+                <input type="checkbox"  [disabled]=true [ngModel]="this.Part3All12AGI ? true: employerPart3[6]?.AggregatedGroupIndicator">
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [ngModel]="employerPart3[6]?.address" [disabled]=true />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    31 Aug
+                </label>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td style="width:10%">
+                            <input type="checkbox"  [disabled]=true [ngModel]="this.Part3All12Yes ? false:employerPart3[7]?.MinimumEssentialCoverageOfferIndicator">
+                        </td>
+                        <td style="width:10%">
+                            <input type="checkbox"  [disabled]=true  [ngModel]="this.Part3All12No ? false:!employerPart3[7]?.MinimumEssentialCoverageOfferIndicator">
+                        </td>
+                        <td style="width:5%">
+                            <input type="text" [disabled]=true [ngModel]="this.employerPart3[7]?.MEC95" style="width:100%">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [ngModel]="employerPart3[7]?.FullTimeEmployeeCount"  [disabled]=true />
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [ngModel]="employerPart3[7]?.TotalEmployeeCount"  [disabled]=true />
+            </td>
+            <td>
+                <input type="checkbox" [disabled]=true  [ngModel]="this.Part3All12AGI ? true: employerPart3[7]?.AggregatedGroupIndicator">
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [disabled]=true  [ngModel]="employerPart3[7]?.address" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    32 Sept
+                </label>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td style="width:10%">
+                            <input type="checkbox" [disabled]=true  [ngModel]="this.Part3All12Yes ? false:employerPart3[8]?.MinimumEssentialCoverageOfferIndicator">
+                        </td>
+                        <td style="width:10%">
+                            <input type="checkbox" [disabled]=true  [ngModel]="this.Part3All12No ? false:!employerPart3[8]?.MinimumEssentialCoverageOfferIndicator">
+                        </td>
+                        <td style="width:5%">
+                            <input type="text" [disabled]=true [ngModel]="this.employerPart3[8]?.MEC95" style="width:100%">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [disabled]=true  [ngModel]="employerPart3[8]?.FullTimeEmployeeCount" />
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;"  [disabled]=true [ngModel]="employerPart3[8]?.TotalEmployeeCount" />
+            </td>
+            <td>
+                <input type="checkbox"  [disabled]=true [ngModel]="this.Part3All12AGI ? true: employerPart3[8]?.AggregatedGroupIndicator">
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;"  [disabled]=true [ngModel]="employerPart3[8]?.address" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    33 Oct
+                </label>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td style="width:10%">
+                            <input type="checkbox" [disabled]=true  [ngModel]="this.Part3All12Yes ? false:employerPart3[9]?.MinimumEssentialCoverageOfferIndicator">
+                        </td>
+                        <td style="width:10%">
+                            <input type="checkbox" [disabled]=true  [ngModel]="this.Part3All12No ? false:!employerPart3[9]?.MinimumEssentialCoverageOfferIndicator">
+                        </td>
+                        <td style="width:5%">
+                            <input type="text" [disabled]=true [ngModel]="this.employerPart3[9]?.MEC95" style="width:100%">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [disabled]=true  [ngModel]="employerPart3[9]?.FullTimeEmployeeCount" />
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;"  [disabled]=true [ngModel]="employerPart3[9]?.TotalEmployeeCount" />
+            </td>
+            <td>
+                <input type="checkbox" [disabled]=true  [ngModel]="this.Part3All12AGI ? true: employerPart3[9]?.AggregatedGroupIndicator">
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;"  [disabled]=true [ngModel]="employerPart3[9]?.address" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    34 Nov
+                </label>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td style="width:10%">
+                            <input type="checkbox" [disabled]=true  [ngModel]="this.Part3All12Yes ? false:employerPart3[10]?.MinimumEssentialCoverageOfferIndicator">
+                        </td>
+                        <td style="width:10%">
+                            <input type="checkbox" [disabled]=true  [ngModel]="this.Part3All12No ? false:!employerPart3[10]?.MinimumEssentialCoverageOfferIndicator">
+                        </td>
+                        <td style="width:5%">
+                            <input type="text" [disabled]=true [ngModel]="this.employerPart3[10]?.MEC95" style="width:100%">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [disabled]=true  [ngModel]="employerPart3[10]?.FullTimeEmployeeCount" />
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [disabled]=true  [ngModel]="employerPart3[10]?.TotalEmployeeCount" />
+            </td>
+            <td>
+                <input type="checkbox"  [disabled]=true [ngModel]="this.Part3All12AGI ? true: employerPart3[10]?.AggregatedGroupIndicator">
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [disabled]=true  [ngModel]="employerPart3[10]?.address" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    35 Dec
+                </label>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td style="width:10%">
+                            <input type="checkbox"  [disabled]=true [ngModel]="this.Part3All12Yes ? false:this.employerPart3[11]?.MinimumEssentialCoverageOfferIndicator">
+                        </td>
+                        <td style="width:10%">
+                            <input type="checkbox"  [disabled]=true [ngModel]="this.Part3All12No ? false:!this.employerPart3[11]?.MinimumEssentialCoverageOfferIndicator">
+                        </td>
+                        <td style="width:5%">
+                            <input type="text" [disabled]=true [ngModel]="this.employerPart3[11]?.MEC95" style="width:100%">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;" [disabled]=true  [ngModel]="this.employerPart3[11]?.FullTimeEmployeeCount" />
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;"  [disabled]=true  [ngModel]="this.employerPart3[11]?.TotalEmployeeCount" />
+            </td>
+            <td style="align-items:flex-end">
+                <label>     </label>
+                <input type="checkbox"  [disabled]=true  [ngModel]="this.Part3All12AGI ? true: employerPart3[11]?.AggregatedGroupIndicator">
+            </td>
+            <td>
+                <input type="text" style="padding: 5px;"  [disabled]=true  [ngModel]="employerPart3[11]?.address" />
+            </td>
+        </tr>
+    </table>
+
+
+    <div style="width: 100%;">
+        <table style="width: 100%;">
+            <tr style="font-weight: bold; font-size: 10px;">
+                <th style="width:100%;"></th>
+            </tr>
+            <tr>
+                <td colspan="1" style="border:solid">
+                    <label style="background-color:black; color:white;font-weight:bolder;">Part IV </label>
+                    <label>Other ALE Members of Aggregated ALE Group</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <label>Enter the names and EINs of Other ALE Members of the Aggregated ALE Group (who were members at any time during the calendar year).</label>
+                </td>
+            </tr>
+        </table>
+        <div style="float:left; width: 50%">
+            <table style="width: 100%;">         
+                <tr>
+                    <td>
+                        <label style="font-weight:bolder;"></label>
+                    </td>
+                    <td>
+                        <label style="font-weight:bolder;">Name</label>
+                    </td>
+                    <td>
+                        <label style="font-weight:bolder;">EIN</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        36
+                    </td>
+                    <td>
+                        <input type="text" disabled  style="width:100%; padding: 5px;" [ngModel]="this.employerPart4[0]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[0]?.EIN" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        37
+                    </td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[1]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[1]?.EIN" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        38
+                    </td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[2]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[2]?.EIN" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>39</td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[3]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[3]?.EIN" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[4]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[4]?.EIN" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>41</td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[5]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[5]?.EIN" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>42</td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[6]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[6]?.EIN" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>43</td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[7]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[7]?.EIN" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>44</td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[8]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[8]?.EIN" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>45</td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[9]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[9]?.EIN" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>46</td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[10]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[10]?.EIN" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>47</td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[11]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[11]?.EIN" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>48</td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[12]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[12]?.EIN" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>49</td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[13]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[13]?.EIN" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>50</td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[14]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[14]?.EIN" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="float:right; width: 50%">
+            <table style="width: 100%;">                
+                <tr>
+                    <td>
+                        <label style="font-weight:bolder;"></label>
+                    </td>
+                    <td>
+                        <label style="font-weight:bolder;">Name</label>
+                    </td>
+                    <td>
+                        <label style="font-weight:bolder;">EIN</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        51
+                    </td>
+                    <td>
+                        <input type="text" disabled style="width:100%; padding: 5px;" [ngModel]="this.employerPart4[15]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[16]?.EIN" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        52
+                    </td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[16]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[16]?.EIN" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        53
+                    </td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[17]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[17]?.EIN"  />
+                    </td>
+                </tr>
+                <tr>
+                    <td>54</td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[18]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[18]?.EIN" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>55</td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[19]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[19]?.EIN" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>56</td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[20]?.EmployerName"/>
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[20]?.EIN"  />
+                    </td>
+                </tr>
+                <tr>
+                    <td>57</td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[21]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[21]?.EIN"  />
+                    </td>
+                </tr>
+                <tr>
+                    <td>58</td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[22]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[22]?.EIN" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>59</td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[23]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[23]?.EIN"  />
+                    </td>
+                </tr>
+                <tr>
+                    <td>60</td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[24]?.EmployerName"  />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[24]?.EIN"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>61</td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[25]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[25]?.EIN" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>62</td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[26]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[26]?.EIN" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>63</td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[27]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[27]?.EIN" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>64</td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[28]?.EmployerName"  />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[28]?.EIN" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>65</td>
+                    <td>
+                        <input type="text" disabled style="width:100%;padding: 5px;" [ngModel]="this.employerPart4[29]?.EmployerName" />
+                    </td>
+                    <td>
+                        <input type="text" disabled style="padding: 5px;" [ngModel]="this.employerPart4[29]?.EIN" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <table  style="width: 100%;">
+        <tr  style="width: 100%;">
+            <td  style="width: 100%;">
+                <p>
+                    Clicking <a href="../securepages/irs_transmit_hold.aspx ">here</a> will put the transmission on hold until you release it                   
+                </p>
+            </td>
+        </tr>
+    </table>
+</div>

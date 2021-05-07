@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<soapenv:Envelope
+  xmlns:oas="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+  xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:us:gov:treasury:irs:ext:aca:air:ty20"
+  xmlns:urn1="urn:us:gov:treasury:irs:common" xmlns:urn2="urn:us:gov:treasury:irs:msg:acabusinessheader"
+  xmlns:urn3="urn:us:gov:treasury:irs:msg:acasecurityheader"
+  xmlns:urn4="urn:us:gov:treasury:irs:msg:irsacabulkrequesttransmitter">
+  <soapenv:Header>
+    <wsse:Security
+      xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+      xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+      <ds:Signature Id="SIG-5E296AE8A7CF28ACCC14774977964791018"
+        xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:SignedInfo>
+          <ds:CanonicalizationMethod
+            Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#WithComments" />
+          <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+          <ds:Reference Id="Timestamp" URI="#TS-5E296AE8A7CF28ACCC14774977964731014">
+            <ds:Transforms>
+              <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+                <InclusiveNamespaces PrefixList="wsse oas soapenv urn urn1 urn2 urn3 urn4"
+                xmlns="http://www.w3.org/2001/10/xml-exc-c14n#" />
+              </ds:Transform>
+            </ds:Transforms>
+            <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384" />
+            <ds:DigestValue>@@TimestampDigestValue@@</ds:DigestValue>
+          </ds:Reference>
+          <ds:Reference Id="ACABusinessHeader" URI="#id-8C57FD77752E41888214739626212831137">
+            <ds:Transforms>
+              <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+                <InclusiveNamespaces PrefixList="oas soapenv urn1 urn2 urn3 urn4"
+                xmlns="http://www.w3.org/2001/10/xml-exc-c14n#" />
+              </ds:Transform>
+            </ds:Transforms>
+            <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384" />
+            <ds:DigestValue>@@ACABusinessHeaderDigestValue@@</ds:DigestValue>
+          </ds:Reference>
+          <ds:Reference Id="ACABulkRequestTransmitterStatusDetailRequest" URI="#id-8C57FD77752E41888214739626212831138">
+            <ds:Transforms>
+              <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+                <InclusiveNamespaces PrefixList="oas soapenv urn urn1 urn3 urn4"
+                xmlns="http://www.w3.org/2001/10/xml-exc-c14n#" />
+              </ds:Transform>
+            </ds:Transforms>
+            <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384" />
+            <ds:DigestValue>@@ACABulkRequestTransmitterStatusDetailRequestDigestValue@@</ds:DigestValue>
+          </ds:Reference>
+        </ds:SignedInfo>
+        <ds:SignatureValue></ds:SignatureValue>
+        <ds:KeyInfo Id="KI-5E296AE8A7CF28ACCC14774977964771016">
+          <wsse:SecurityTokenReference wsu:Id="STR-5E296AE8A7CF28ACCC14774977964771017">
+            <wsse:KeyIdentifier
+              EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary"
+              ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3">@@KeyIdentifier@@
+            </wsse:KeyIdentifier>
+          </wsse:SecurityTokenReference>
+        </ds:KeyInfo>
+      </ds:Signature>
+      <wsu:Timestamp wsu:Id="TS-5E296AE8A7CF28ACCC14774977964731014">
+        <wsu:Created>@@TimestampCreated@@</wsu:Created>
+        <wsu:Expires>@@TimestampExpires@@</wsu:Expires>
+      </wsu:Timestamp>
+    </wsse:Security>
+    <urn:ACATransmitterManifestReqDtl
+    wsu:Id="id-8C57FD77752E41888214739626212831137"
+    xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+      <urn:PaymentYr>@@PaymentYr@@</urn:PaymentYr>
+      <urn:PriorYearDataInd>@@PriorYearDataInd@@</urn:PriorYearDataInd>
+      <urn1:EIN>@@EIN@@</urn1:EIN>
+      <urn:TransmissionTypeCd>@@TransmissionTypeCd@@</urn:TransmissionTypeCd>
+      <urn:TestFileCd>@@TestFileCd@@</urn:TestFileCd>
+      <urn:TransmitterNameGrp>
+        <urn:BusinessNameLine1Txt>@@BusinessNameLine1Txt@@</urn:BusinessNameLine1Txt>
+        <urn:BusinessNameLine2Txt>@@BusinessNameLine2Txt@@</urn:BusinessNameLine2Txt>
+      </urn:TransmitterNameGrp>
+      <urn:CompanyInformationGrp>
+        <urn:CompanyNm>@@CompanyNm@@</urn:CompanyNm>
+        <urn:MailingAddressGrp>
+          <urn:USAddressGrp>
+            <urn:AddressLine1Txt>@@AddressLine1Txt@@</urn:AddressLine1Txt>
+            <urn1:CityNm>@@CityNm@@</urn1:CityNm>
+            <urn:USStateCd>@@USStateCd@@</urn:USStateCd>
+            <urn1:USZIPCd>@@USZIPCd@@</urn1:USZIPCd>
+            <urn1:USZIPExtensionCd>@@USZIPExtensionCd@@</urn1:USZIPExtensionCd>
+          </urn:USAddressGrp>
+        </urn:MailingAddressGrp>
+        <urn:ContactNameGrp>
+          <urn:PersonFirstNm>@@PersonFirstNm@@</urn:PersonFirstNm>
+          <urn:PersonLastNm>@@PersonLastNm@@</urn:PersonLastNm>
+        </urn:ContactNameGrp>
+        <urn:ContactPhoneNum>@@ContactPhoneNum@@</urn:ContactPhoneNum>
+      </urn:CompanyInformationGrp>
+      <urn:VendorInformationGrp>
+        <urn:VendorCd>@@VendorCd@@</urn:VendorCd>
+        <urn:ContactNameGrp>
+          <urn:PersonFirstNm>@@VendorPersonFirstNm@@</urn:PersonFirstNm>
+          <urn:PersonLastNm>@@VendorPersonLastNm@@</urn:PersonLastNm>
+        </urn:ContactNameGrp>
+        <urn:ContactPhoneNum>@@VendorContactPhoneNum@@</urn:ContactPhoneNum>
+      </urn:VendorInformationGrp>
+      <urn:TotalPayeeRecordCnt>@@TotalPayeeRecordCnt@@</urn:TotalPayeeRecordCnt>
+      <urn:TotalPayerRecordCnt>@@TotalPayerRecordCnt@@</urn:TotalPayerRecordCnt>
+      <urn:SoftwareId>@@SoftwareId@@</urn:SoftwareId>
+      <urn:FormTypeCd>@@FormTypeCd@@</urn:FormTypeCd>
+      <urn1:BinaryFormatCd>@@BinaryFormatCd@@</urn1:BinaryFormatCd>
+      <urn1:ChecksumAugmentationNum>@@ChecksumAugmentationNum@@</urn1:ChecksumAugmentationNum>
+      <urn1:AttachmentByteSizeNum>@@AttachmentByteSizeNum@@</urn1:AttachmentByteSizeNum>
+      <urn:DocumentSystemFileNm>@@DocumentSystemFileNm@@</urn:DocumentSystemFileNm>
+    </urn:ACATransmitterManifestReqDtl>
+    <urn2:ACABusinessHeader wsu:Id="id-8C57FD77752E41888214739626212831138"
+      xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+      <urn:UniqueTransmissionId>
+        @@UniqueTransmissionId@@
+      </urn:UniqueTransmissionId>
+      <urn1:Timestamp>@@Timestamp@@</urn1:Timestamp>
+    </urn2:ACABusinessHeader>
+    <urn3:ACASecurityHeader />
+  </soapenv:Header>
+  <soapenv:Body>
+    <urn4:ACABulkRequestTransmitter version="1.0">
+      <urn1:BulkExchangeFile>
+		<n1:Form109495CTransmittalUpstream
+            xmlns="urn:us:gov:treasury:irs:ext:aca:air:ty20"
+            xmlns:irs="urn:us:gov:treasury:irs:common"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:n1="urn:us:gov:treasury:irs:msg:form1094-1095Ctransmitterupstreammessage"
+            xsi:schemaLocation="urn:us:gov:treasury:irs:msg:form1094-1095Ctransmitterupstreammessage IRS-Form1094-1095CTransmitterUpstreamMessage.xsd">
+				@@Form1094CUpstreamDetail@@
+        </n1:Form109495CTransmittalUpstream>
+      </urn1:BulkExchangeFile>
+    </urn4:ACABulkRequestTransmitter>
+  </soapenv:Body>
+</soapenv:Envelope>

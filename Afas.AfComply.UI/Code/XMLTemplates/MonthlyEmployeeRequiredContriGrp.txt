@@ -1,0 +1,14 @@
+﻿<MonthlyEmployeeRequiredContriGrp>
+	<JanuaryAmt>@@JanuaryAmt@@</JanuaryAmt>
+	<FebruaryAmt>@@FebruaryAmt@@</FebruaryAmt>
+	<MarchAmt>@@MarchAmt@@</MarchAmt>
+	<AprilAmt>@@AprilAmt@@</AprilAmt>
+	<MayAmt>@@MayAmt@@</MayAmt>
+	<JuneAmt>@@JuneAmt@@</JuneAmt>
+	<JulyAmt>@@JulyAmt@@</JulyAmt>
+	<AugustAmt>@@AugustAmt@@</AugustAmt>
+	<SeptemberAmt>@@SeptemberAmt@@</SeptemberAmt>
+	<OctoberAmt>@@OctoberAmt@@</OctoberAmt>
+	<NovemberAmt>@@NovemberAmt@@</NovemberAmt>
+	<DecemberAmt>@@DecemberAmt@@</DecemberAmt>
+</MonthlyEmployeeRequiredContriGrp>

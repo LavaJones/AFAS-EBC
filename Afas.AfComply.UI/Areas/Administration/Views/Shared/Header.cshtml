@@ -1,0 +1,17 @@
+﻿@using Afas.AfComply.Domain
+@using Afas.AfComply.UI.Areas
+
+
+<div class="header-right" style="padding-right:80px;">
+    <div id="toplinks">
+        <h1 style="font-size: 12px;">
+            @(CookieTokenAuthCheckAttribute.GetUserId(Context))
+            <br />
+            <br />
+            @(CookieTokenAuthCheckAttribute.GetEmployerDbaName(Context))
+            <br />
+            <br />
+            <button class="btn" onclick="window.location='/Logout.aspx'" (click)="$event.preventDefault();">Logout</button>
+        </h1>
+    </div>
+</div>

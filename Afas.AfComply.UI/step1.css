@@ -1,0 +1,37 @@
+﻿.btn {
+	background-color: red;
+    color: white; 
+    border: 3px solid #f44336;
+}
+.btn:hover {
+	background:#eb0029;
+}
+.lbl {
+	width: 100px;
+	float: left;
+	text-align: right;
+	
+	padding: 11px;
+	
+	height: 15px;
+	font-size: 13px;
+	
+}
+.txt3 {
+	
+	padding: 5px;
+	width: 225px;
+	height: 15px;
+}
+.ddl2 {
+	padding: 5px;
+	width: 238px;
+	height: 28px;
+}
+
+
+
+
+
+
+

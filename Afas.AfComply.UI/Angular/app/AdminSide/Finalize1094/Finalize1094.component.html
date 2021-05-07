@@ -1,0 +1,90 @@
+﻿
+<h3>Finalize 1094 for Employers</h3>
+<table style="width:50%;">
+    <tr>
+        <td>
+            <label> Select Employer :</label>
+        </td>
+        <td>
+            <select [(ngModel)]="selectedEmployer" (change)="onEmployerSelect(selectedEmployer)">
+                <option *ngFor="let emp of employers"
+                        [value]="emp.EncryptedId">
+                    {{ emp.EmployerName }}
+                </option>
+            </select>
+        </td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td>
+            <button (click)="Finalize()">Finalize</button>
+        </td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td>
+        </td>
+    </tr>
+
+</table>
+<br />
+<br />
+<br />
+<div *ngIf="this.Employer">
+    <h3>Employer Details :</h3>
+    <table style="width:30%">
+        <tr>
+            <td style="width:50%">
+                Name:
+            </td>
+            <td>
+                {{this.Employer.EmployerName}}
+            </td>
+        </tr>
+        <tr>
+            <td style="width:50%">
+                EIN:
+            </td>
+            <td>
+                {{this.Employer.EIN}}
+            </td>
+        </tr>
+        <tr>
+            <td style="width:50%">
+                Address:
+            </td>
+            <td>
+                {{this.Employer.Address}}
+            </td>
+        </tr>
+        <tr>
+            <td style="width:50%">
+                City:
+            </td>
+            <td>
+                {{this.Employer.City}}
+            </td>
+        </tr>
+        <tr>
+            <td style="width:50%">
+                State:
+            </td>
+            <td>
+                {{this.Employer.State}}
+            </td>
+        </tr>
+        <tr>
+            <td style="width:50%">
+                Zip:
+            </td>
+            <td>
+                {{this.Employer.Zip}}
+            </td>
+        </tr>
+
+
+    </table>
+</div>
+

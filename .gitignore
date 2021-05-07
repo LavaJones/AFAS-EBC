@@ -1,0 +1,137 @@
+
+# /
+/*.suo
+/TestResults
+/artifacts
+/build-log.txt
+/build-release-notes.txt
+/packages
+/results
+/.octopack
+/*.log
+/*.psess
+/*.vsp
+/*/bin/*
+/*/obj/*
+
+# /Afas/
+/Afas/*.user
+
+# /Afas.AfComply/
+/Afas.AfComply/bin
+/Afas.AfComply/obj
+/Afas.AfComply/Afas.AfComply.csproj.user
+
+# /Afas.AfComply.Reporting/
+/Afas.AfComply.Reporting/*.user
+
+# /Afas.AfComply.Reporting.Api/
+/Afas.AfComply.Reporting.Api/logfile.txt
+/Afas.AfComply.Reporting.Api/Docs
+
+# /Afas.AfComply.UI/
+/Afas.AfComply.UI/*.user
+/Afas.AfComply.UI/Bin
+/Afas.AfComply.UI/bin
+/Afas.AfComply.UI/logfile.txt
+/Afas.AfComply.UI/obj
+/Afas.AfComply.UI/clientDist
+/Afas.AfComply.UI/adminDist
+/Afas.AfComply.UI/package-lock.json
+/Afas.AfComply.UI/npm-debug.log
+/Afas.AfComply.UI/Docs
+
+# /Afas.AfComply.UI/App_Data/
+/Afas.AfComply.UI/App_Data/Logs/*.txt
+/Afas.AfComply.UI/App_Data/TempImageFiles
+
+# /Afas.AfComply.UI/SQL/
+/Afas.AfComply.UI/SQL/CREATE_TYPE_employeeCoveredMonthlyDetail.sql
+/Afas.AfComply.UI/SQL/INSERT_UPDATE_covered_individual_monthly_detail.sql
+/Afas.AfComply.UI/SQL/UPDATE_covered_individual_monthly_detail.sql
+/Afas.AfComply.UI/SQL/INSERT_covered_individual_monthly_detail.sql
+
+# /Afas.AfComply.UI/Scripts/
+/Afas.AfComply.UI/Scripts/adminDist
+/Afas.AfComply.UI/Scripts/clientDist
+
+# /Afas.AfComply.UI/ftps/
+/Afas.AfComply.UI/ftps/*.csv
+
+# /Afas.AfComply.UI/ftps/InsuranceChangeEvent/
+/Afas.AfComply.UI/ftps/InsuranceChangeEvent/*.csv
+
+# /Afas.AfComply.UI/ftps/Print/
+/Afas.AfComply.UI/ftps/Print/*.txt
+
+# /Afas.AfComply.UI/ftps/Print1094/
+/Afas.AfComply.UI/ftps/Print1094/*.txt
+
+# /Afas.AfComply.UI/ftps/Transmit/
+/Afas.AfComply.UI/ftps/Transmit/*.xml
+
+# /Afas.AfComply.UI/ftps/submission_ack/
+/Afas.AfComply.UI/ftps/submission_ack/*.xml
+
+# /Afas.AfComplyTests/
+/Afas.AfComplyTests/bin
+/Afas.AfComplyTests/obj
+
+# /Afas.ImportConverter/
+/Afas.ImportConverter/*.user
+/Afas/bin/Debug
+/Afas/obj/Debug
+/Afas.Test/obj/Debug
+/Afas.Test/bin/Debug
+/Afas.ImportConverter.Tests/obj/Debug
+/Afas.ImportConverter.Tests/bin/Debug
+/.vs
+/Afas.ImportConverter/obj/Debug
+/Afas.ImportConverter/bin/Debug
+/Afas.AfComply.UI/node_modules
+/Afas.AfComply.Reporting.Tests/obj/Debug
+/Afas.AfComply.Reporting.Tests/bin/Debug
+/Afas.AfComply.Reporting.Core.Tests/obj/Debug
+/Afas.AfComply.Reporting.Core.Tests/bin/Debug
+/Afas.AfComply.Reporting.Core/obj/Debug
+/Afas.AfComply.Reporting.Core/bin/Debug
+/Afas.AfComply.Reporting.Api.Tests/obj/Debug
+/Afas.AfComply.Reporting.Api.Tests/bin/Debug
+/Afas.AfComply.Reporting.Api/obj/Debug
+/Afas.AfComply.Reporting.Api/bin
+/Afas.AfComply.Reporting/obj/Debug
+/Afas.AfComply.Reporting/bin/Debug
+/.vs
+/Afas.AfComply.Reporting.Api/App_Data/Logs/*.txt
+/Afas.Test/obj/Release
+/Afas/obj/Release
+/Afas.AfComply.Reporting/obj/Release
+/Afas.AfComply.Reporting.Api/obj/Release
+/Afas.AfComply.Reporting.Api.Tests/obj/Release
+/Afas.AfComply.Reporting.Core/obj/Release
+/Afas.AfComply.Reporting.Core.Tests/obj/Release
+/Afas.AfComply.Reporting.Tests/obj/Release
+/Afas.ImportConverter/obj/Release
+/Afas.ImportConverter.Tests/obj/Release
+/Afas.AfComply.UI/ftps/Archive/*
+/Afas.AfComply.UI/ftps
+*.map
+/Afas.AfComply.UI/dist/out-tsc
+/Afas/bin/*
+*.csv
+/tools
+# Ignore Client Content years
+/Afas.AfComply.UI/client_content/20**/**
+
+# Specific Includes for NuGet Packages
+!**/packages/Afas.*
+!**/packages/Afc.*
+!**/packages/Afas.*/*.nupkg
+!**/packages/Afc.*/*.nupkg
+
+# Specific Includes for NuGet Packages other folder
+!**/PrivatePackages
+!**/PrivatePackages/Afc.*
+!**/PrivatePackages/Afas.*
+!**/PrivatePackages/Afc.*/*.nupkg
+!**/PrivatePackages/Afas.*/*.nupkg

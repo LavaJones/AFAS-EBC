@@ -1,0 +1,50 @@
+﻿@using Afas.AfComply.Domain
+@using Afas.AfComply.UI.Areas
+
+<div class="header">
+    <div class="image">
+    </div>
+</div>
+
+
+<div class="header-right" style="padding-right:80px;">
+    <div id="toplinks">
+        <h1 style="font-size: 12px;">
+            Need Help? Call @Branding.PhoneNumber
+            <br />
+            <br />
+            @(CookieTokenAuthCheckAttribute.GetUserId(Context))
+            <br />
+            <br />
+            @(CookieTokenAuthCheckAttribute.GetEmployerDbaName(Context))
+            <br />
+            <br />
+            <button class="btn" onclick="window.location='/Logout.aspx'" (click)="$event.preventDefault();">Logout</button>
+        </h1>
+    </div>
+</div>
+
+<div style="padding-left: 20px">
+    <a href="~/securepages/Default.aspx">
+        <img src="@Url.Content(Branding.LogoUri)" style="height: 70px" alt="@Branding.ProductName Logo" class="logo" />
+    </a>
+
+    <div id="nav2">
+        <ul>
+            <li><a href="~/securepages/default.aspx">Home</a></li>
+            <li><a href="../securepages/e_find.aspx">Employee</a></li>
+            <li><a href="/../securepages/r_reporting.aspx">Reports</a></li>
+            <li><a href="/securepages/s_setup.aspx">Employer Setup</a></li>
+            <li><a href="~/securepages/alerts.aspx">Alerts</a></li>
+            <li><a href="@Feature.HomePageExternalLink">Help</a></li>
+            <li><a href="@Feature.GuidePageExternalLink" target="_blank">How-to Guides</a></li>
+            <li><a href="/FileCabinet/ViewFileCabinet">File Cabinet</a></li>
+
+        </ul>
+
+        <ul class="right">
+            <li></li>
+        </ul>
+
+    </div>
+</div>

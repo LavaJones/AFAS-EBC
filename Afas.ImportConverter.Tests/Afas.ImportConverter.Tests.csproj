@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD7E1A01-F40A-40D2-958A-BACEC27ECE05}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Afas.ImportConverter.Tests</RootNamespace>
+    <AssemblyName>Afas.ImportConverter.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Afc.Core, Version=2.0.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afc.Core.2.0.10.0\lib\net40\Afc.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.3.0.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="..\ProjectArtifacts\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Application\Implementation\DataTableBuilderTests.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\UnifyColumnsFormatCommandTests.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\RenameColumnFormatCommandTests.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\ReplaceByValueFormatCommandTests.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\FormatColumnValueFormatCommandTests.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\MergeColumnsFormatCommandTests.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\DeleteColumnFormatCommandTests.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\DeleteColumnIfBlankFormatCommandTests.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\DeleteRowsFormatCommandTests.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\DeleteByValueFormatCommandTests.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\DefaultColumnValueFormatCommandTests.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\DefaultColumnSingleFormatCommandTests.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\AutoGenerateDefaultValuesFormatCommandTests.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\AddNewColumnFormatCommandTests.cs" />
+    <Compile Include="Domain\ImportFormatting\DataFormatters\BooleanDataFormatterTests.cs" />
+    <Compile Include="Domain\ImportFormatting\DataFormatters\ManagedDataFormatterTests.cs" />
+    <Compile Include="Domain\ImportFormatting\DataFormatters\DateDataFormatterTests.cs" />
+    <Compile Include="Domain\ImportFormatting\DataFormatters\IntegerDataFormatterTests.cs" />
+    <Compile Include="Domain\ImportFormatting\DataFormatters\DecimalDataFormatterTests.cs" />
+    <Compile Include="Domain\ImportFormatting\Generators\ManagedValueGeneratorTests.cs" />
+    <Compile Include="Domain\ImportFormatting\Generators\UniqueNumberValueGeneratorTests.cs" />
+    <Compile Include="Domain\ImportFormatting\Generators\UniqueDateValueGeneratorTests.cs" />
+    <Compile Include="Domain\ImportFormatting\Generators\RandomGuidValueGeneratorTests.cs" />
+    <Compile Include="Domain\ImportFormatting\Generators\RandomNumberValueGeneratorTests.cs" />
+    <Compile Include="Domain\ImportFormatting\MapperTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Afas.ImportConverter\Afas.ImportConverter.csproj">
+      <Project>{62a14aeb-f7bb-4607-afa4-38e04da85eb2}</Project>
+      <Name>Afas.ImportConverter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Afas\Afas.csproj">
+      <Project>{f1c8c3d8-94da-403e-a5e7-a9c58486deed}</Project>
+      <Name>Afas</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

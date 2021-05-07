@@ -1,0 +1,14 @@
+﻿<MonthlyOfferCoverageGrp>
+	<JanOfferCd>@@JanOfferCd@@</JanOfferCd>
+	<FebOfferCd>@@FebOfferCd@@</FebOfferCd>
+	<MarOfferCd>@@MarOfferCd@@</MarOfferCd>
+	<AprOfferCd>@@AprOfferCd@@</AprOfferCd>
+	<MayOfferCd>@@MayOfferCd@@</MayOfferCd>
+	<JunOfferCd>@@JunOfferCd@@</JunOfferCd>
+	<JulOfferCd>@@JulOfferCd@@</JulOfferCd>
+	<AugOfferCd>@@AugOfferCd@@</AugOfferCd>
+	<SepOfferCd>@@SepOfferCd@@</SepOfferCd>
+	<OctOfferCd>@@OctOfferCd@@</OctOfferCd>
+	<NovOfferCd>@@NovOfferCd@@</NovOfferCd>
+	<DecOfferCd>@@DecOfferCd@@</DecOfferCd>
+</MonthlyOfferCoverageGrp>

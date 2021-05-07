@@ -1,0 +1,177 @@
+﻿<div *blockUI="'edit-1095'">
+    <table *ngIf="employee" style="table-layout: fixed;">
+        <tr style="font-weight: bold; font-size: 10px;">
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+        </tr>
+
+        <tr style="background-color: lightgray; font-weight: bold; font-size: 10px;">
+            <td>Part I</td>
+            <td>1095C</td>
+            <td colspan="3">Name</td>
+            <td colspan="2">SSN</td>
+            <td colspan="2">Address</td>
+            <td colspan="2">City</td>
+            <td>State</td>
+            <td>Zip</td>
+            <td>Hire Date</td>
+            <td>Term Date</td>
+        </tr>
+
+        <tr style="font-weight: bold; font-size: 10px; vertical-align: top;">
+            <td>
+
+
+
+
+
+
+                <input type="button" value="Unapprove" (click)="Unapprove()" class="btn" style="width: 80%; margin-top: 5px;" />
+                    
+
+
+
+
+            </td>
+            <td>
+                {{employee.Receiving1095}}
+            </td>
+            <td colspan="3">
+                <input type="text" [ngModel]="employee.FirstName" style="width: 90%; padding: 5px;" disabled />
+                <br />
+                <input type="text" [ngModel]="employee.MiddleName" style="width: 90%; padding: 5px;" disabled />
+                <br />
+                <input type="text" [ngModel]="employee.LastName" style="width: 90%; padding: 5px;" disabled />
+            </td>
+            <td colspan="2"><input type="text" [ngModel]="employee.SSN" style="width: 90%; padding: 5px;" readonly="readonly" disabled /></td>
+            <td colspan="2"><input type="text" [ngModel]="employee.StreetAddress" style="width: 90%; padding: 5px; font-size:11px;" disabled /></td>
+            <td colspan="2"><input type="text" [ngModel]="employee.City" style="width: 90%; padding: 5px; font-size:11px;" disabled /></td>
+            <td>
+                <select name="States" [ngModel]="employee.State" style="width: 90%; padding: 5px;" disabled>
+                    <option value="1">AL</option>
+                    <option value="2">AK</option>
+                    <option value="3">AZ</option>
+                    <option value="4">AR</option>
+                    <option value="5">CA</option>
+                    <option value="6">CO</option>
+                    <option value="7">CT</option>
+                    <option value="8">DE</option>
+                    <option value="9">FL</option>
+                    <option value="10">GA</option>
+                    <option value="11">HI</option>
+                    <option value="12">ID</option>
+                    <option value="13">IL</option>
+                    <option value="14">IN</option>
+                    <option value="15">IA</option>
+                    <option value="16">KS</option>
+                    <option value="17">KY</option>
+                    <option value="18">LA</option>
+                    <option value="19">ME</option>
+                    <option value="20">MD</option>
+                    <option value="21">MA</option>
+                    <option value="22">MI</option>
+                    <option value="23">MN</option>
+                    <option value="24">MS</option>
+                    <option value="25">MO</option>
+                    <option value="26">MT</option>
+                    <option value="27">NE</option>
+                    <option value="28">NV</option>
+                    <option value="29">NH</option>
+                    <option value="30">NJ</option>
+                    <option value="31">NM</option>
+                    <option value="32">NY</option>
+                    <option value="33">NC</option>
+                    <option value="34">ND</option>
+                    <option value="35">OH</option>
+                    <option value="36">OK</option>
+                    <option value="37">OR</option>
+                    <option value="38">PA</option>
+                    <option value="39">RI</option>
+                    <option value="40">SC</option>
+                    <option value="41">SD</option>
+                    <option value="42">TN</option>
+                    <option value="43">TX</option>
+                    <option value="44">UT</option>
+                    <option value="45">VT</option>
+                    <option value="46">VA</option>
+                    <option value="47">WA</option>
+                    <option value="48">WV</option>
+                    <option value="49">WI</option>
+                    <option value="50">WY</option>
+                    <option value="51">DC</option>
+                </select>
+            </td>
+            <td><input type="text" [ngModel]="employee.Zip" style="width: 85%; padding: 5px;" disabled /></td>
+        </tr>
+
+        <tr style="background-color: lightgray; font-weight: bold; font-size: 10px;">
+            <td colspan="2">Part II</td>
+            <td>All 12</td>
+            <td>January</td>
+            <td>February</td>
+            <td>March</td>
+            <td>April</td>
+            <td>May</td>
+            <td>June</td>
+            <td>July</td>
+            <td>August</td>
+            <td>September</td>
+            <td>October</td>
+            <td>November</td>
+            <td>December</td>
+        </tr>
+
+        <tr *ngIf="employee.part2s" style="font-weight: bold; font-size: 10px; overflow: scroll;">
+            <td colspan="2" style="vertical-align: top; line-height: 35px;">
+                <label>Line 14</label>
+                <br />
+                <label>Line 15</label>
+                <br />
+                <label>Line 16</label>
+                <br />
+                <label>Measured FT</label>
+                <br />
+                <label>Offered</label>
+                <br />
+                <br style="clear: both;" />
+            </td>
+            <td *ngFor="let part2s of listOfLists" style="vertical-align: top; line-height: 35px;">
+                <part2-show [part2s]="part2s"></part2-show>
+            </td>
+        </tr>
+
+        <tr style="background-color: lightgray; font-weight: bold; font-size: 10px; vertical-align: middle;">
+            <td>Part III</td>
+            <td colspan="3">Name</td>
+            <td colspan="3">SSN</td>
+            <td colspan="3">DOB</td>
+            <td colspan="4"></td>
+        </tr>
+        <tr style="font-size: 9px;">
+            <td colspan="15">
+                * If Employer provided self-insured coverage, check the box and enter the information for each individual enrolled in coverage, including the employee.
+            </td>
+        </tr>
+
+        <tr *ngIf="employee.part3s">
+            <td colspan="15">
+                <div *ngFor="let part3 of employee.part3s;">
+                    <part3-show [part3]="part3"></part3-show>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<n1:Form109495CTransmittalUpstream
+  xmlns="urn:us:gov:treasury:irs:ext:aca:air:ty17"
+  xmlns:irs="urn:us:gov:treasury:irs:common"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:n1="urn:us:gov:treasury:irs:msg:form1094-1095Ctransmitterupstreammessage"
+  xsi:schemaLocation="urn:us:gov:treasury:irs:msg:form1094-1095Ctransmitterupstreammessage IRS-Form1094-1095CTransmitterUpstreamMessage.xsd">
+  
+  <Form1095CUpstreamDetail recordType="String" lineNum="0">
+    <RecordId>1</RecordId>
+    <CorrectedInd>1</CorrectedInd>
+    <CorrectedRecordInfoGrp>
+      <CorrectedUniqueRecordId>1095C-16-00000001|1|1</CorrectedUniqueRecordId>
+      <CorrectedRecordPayeeName>
+        <PersonFirstNm>First</PersonFirstNm>
+        <PersonMiddleNm>Middle</PersonMiddleNm>
+        <PersonLastNm>Last</PersonLastNm>
+        <SuffixNm>Suffix</SuffixNm>
+      </CorrectedRecordPayeeName>
+      <CorrectedRecordPayeeTIN>111111111</CorrectedRecordPayeeTIN>
+    </CorrectedRecordInfoGrp>
+    <TaxYr>2016</TaxYr>
+    <EmployeeInfoGrp>
+      <OtherCompletePersonName>
+        <PersonFirstNm>First</PersonFirstNm>
+        <PersonMiddleNm>Middle</PersonMiddleNm>
+        <PersonLastNm>Last</PersonLastNm>
+        <SuffixNm>Suffix</SuffixNm>
+      </OtherCompletePersonName>
+      <PersonNameControlTxt>LAST</PersonNameControlTxt>
+      <TINRequestTypeCd>INDIVIDUAL_TIN</TINRequestTypeCd>
+      <SSN>111111111</SSN>
+      <MailingAddressGrp>
+        <USAddressGrp>
+          <AddressLine1Txt>Address Line</AddressLine1Txt>
+          <AddressLine2Txt>Address Line 2</AddressLine2Txt>
+          <CityNm>City</CityNm>
+          <USStateCd>AL</USStateCd>
+          <USZIPCd>22222</USZIPCd>
+          <USZIPExtensionCd>2222</USZIPExtensionCd>
+        </USAddressGrp>
+      </MailingAddressGrp>
+    </EmployeeInfoGrp>
+    <ALEContactPhoneNum>1111111111</ALEContactPhoneNum>
+    <StartMonthNumberCd>04</StartMonthNumberCd>
+    <EmployeeOfferAndCoverageGrp>
+      <AnnualOfferOfCoverageCd>1D</AnnualOfferOfCoverageCd>
+      <MonthlyEmployeeRequiredContriGrp>
+        <JanuaryAmt>120.00</JanuaryAmt>
+        <FebruaryAmt>120.00</FebruaryAmt>
+        <MarchAmt>120.00</MarchAmt>
+        <AprilAmt>150.00</AprilAmt>
+        <MayAmt>150.00</MayAmt>
+        <JuneAmt>150.00</JuneAmt>
+        <JulyAmt>150.00</JulyAmt>
+        <AugustAmt>150.00</AugustAmt>
+        <SeptemberAmt>150.00</SeptemberAmt>
+        <OctoberAmt>150.00</OctoberAmt>
+        <NovemberAmt>150.00</NovemberAmt>
+        <DecemberAmt>150.00</DecemberAmt>
+      </MonthlyEmployeeRequiredContriGrp>
+      <AnnualSafeHarborCd>2C</AnnualSafeHarborCd>
+      </EmployeeOfferAndCoverageGrp>
+    
+      <CoveredIndividualGrp>
+        <CoveredIndividualName>
+          <PersonFirstNm>First</PersonFirstNm>
+          <PersonMiddleNm>Middle</PersonMiddleNm>
+          <PersonLastNm>Lasting</PersonLastNm>
+          <SuffixNm>Suffix</SuffixNm>
+        </CoveredIndividualName>
+        <SSN>222222222</SSN>
+        <CoveredIndividualAnnualInd>1</CoveredIndividualAnnualInd>
+      </CoveredIndividualGrp>
+      
+      <CoveredIndividualGrp>
+        <CoveredIndividualAnnualInd>1</CoveredIndividualAnnualInd>
+        <CoveredIndividualName>
+          <PersonFirstNm>Second</PersonFirstNm>
+          <PersonMiddleNm>Mid</PersonMiddleNm>
+          <PersonLastNm>Lasting</PersonLastNm>
+          <SuffixNm>Suffix</SuffixNm>
+        </CoveredIndividualName>
+        <BirthDt>1980-03-17</BirthDt>
+        <CoveredIndividualMonthlyIndGrp>
+          <AprilInd>1</AprilInd>
+          <MayInd>1</MayInd>
+          <JuneInd>1</JuneInd>
+          <JulyInd>1</JulyInd>
+          <AugustInd>1</AugustInd>
+          <SeptemberInd>1</SeptemberInd>
+          <OctoberInd>1</OctoberInd>
+          <NovemberInd>1</NovemberInd>
+          <DecemberInd>1</DecemberInd>
+        </CoveredIndividualMonthlyIndGrp>
+      </CoveredIndividualGrp>
+      </Form1095CUpstreamDetail>
+</n1:Form109495CTransmittalUpstream>
+

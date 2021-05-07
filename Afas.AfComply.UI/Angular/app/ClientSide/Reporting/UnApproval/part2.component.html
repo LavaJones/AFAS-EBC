@@ -1,0 +1,28 @@
+﻿
+<span *ngIf="part2s && part2s.length == 0">
+    Missing Data
+</span>
+<span *ngIf="null == part2">
+    Missing Data
+</span>
+
+<span *ngIf="part2">
+
+    <select name="Line14" [ngModel]="part2.Line14"  style="width: 60px; padding: 5px;"  disabled>
+        <option *ngFor="let option of line14Options" [ngValue]="option">{{option}}</option>
+    </select>
+
+    <br />
+    <input type="text" [ngModel]="part2.Line15" style="width: 50px; padding: 5px ; height:19px; border-width: 1px;"   name="Line15" disabled/>
+    <br />
+    <select name="Line16" [ngModel]="part2.Line16" style="width: 60px; padding: 5px"  disabled>
+        <option *ngFor="let option of line16Options" [ngValue]="option">{{option}}</option>
+    </select>
+    <br />
+    <input type="checkbox" [ngModel]="part2.Receiving1095C" style="padding: 5px " name="Receiving1095C" disabled>
+    <br />
+    <input type="checkbox" [(ngModel)]="part2.Offered" style="padding: 5px" disabled >
+    <br />
+    <span style="visibility:hidden">{{part2.MonthId}}</span>
+</span>
+

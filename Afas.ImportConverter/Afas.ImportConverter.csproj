@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{62A14AEB-F7BB-4607-AFA4-38E04DA85EB2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Afas.ImportConverter</RootNamespace>
+    <AssemblyName>Afas.ImportConverter</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Afc.Core, Version=2.0.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afc.Core.2.0.10.0\lib\net40\Afc.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Afc.Framework, Version=2.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afc.Framework.2.0.6.0\lib\net40\Afc.Framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Afc.Marketing.Core, Version=4.1.0.103, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afc.Marketing.Core.4.1.0.103\lib\net45\Afc.Marketing.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper.Net4, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Core, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.3.2.2\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Facilities.Logging, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.LoggingFacility.3.2.0\lib\net45\Castle.Facilities.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Services.Logging.Log4netIntegration, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core-log4net.3.2.0\lib\net45\Castle.Services.Logging.Log4netIntegration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Windsor.3.2.1\lib\net45\Castle.Windsor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.94.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.94.2\lib\net40\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.9.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.9.0\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.3.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.3\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="FastMember, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastMember.1.3.0\lib\net45\FastMember.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\ProjectArtifacts\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Application\AFileDataImporter.cs" />
+    <Compile Include="Application\IXlsxFileDataTableBuilder.cs" />
+    <Compile Include="Application\IDataValidationManager.cs" />
+    <Compile Include="Application\Implementation\XlsxDataTableBuilder.cs" />
+    <Compile Include="Application\Implementation\CsvDataTableBuilder.cs" />
+    <Compile Include="Application\Implementation\DataProcessor.cs" />
+    <Compile Include="Application\Implementation\DataTableBuilder.cs" />
+    <Compile Include="Application\ICsvDataTableBuilder.cs" />
+    <Compile Include="Application\ICsvFileDataTableBuilder.cs" />
+    <Compile Include="Application\IDataTableBuilder.cs" />
+    <Compile Include="Application\IDataValidator.cs" />
+    <Compile Include="Application\IHeaderValidator.cs" />
+    <Compile Include="Application\ADataImporter.cs" />
+    <Compile Include="Application\IDataProcessor.cs" />
+    <Compile Include="Application\Implementation\DataValidationManager.cs" />
+    <Compile Include="Application\ImportConverterApplicationInstaller.cs" />
+    <Compile Include="Application\Services\IUploadedFileInfoService.cs" />
+    <Compile Include="Application\Services\IUploadedDataInfoService.cs" />
+    <Compile Include="Application\Services\IStagingImportService.cs" />
+    <Compile Include="Application\Services\IUploadedFileService.cs" />
+    <Compile Include="Application\Services\UploadedFileInfoService.cs" />
+    <Compile Include="Application\Services\UploadedDataInfoService.cs" />
+    <Compile Include="Application\Services\StagingImportService.cs" />
+    <Compile Include="Application\Services\FormatCommandService.cs" />
+    <Compile Include="Application\Services\IFormatCommandService.cs" />
+    <Compile Include="Domain\BaseImportConverterModel.cs" />
+    <Compile Include="Domain\CustomSqlCodeGenerator.cs" />
+    <Compile Include="Domain\IImportConverterDataContext.cs" />
+    <Compile Include="Domain\ImportConverterDomainInstaller.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\FormatCommandRepository.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\IFormatCommandRepository.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\Implementation\AddNewColumnFormatCommand.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\Implementation\AutoGenerateDefaultValuesFormatCommand.cs" />
+    <Compile Include="Domain\ImportFormatting\DataFormatters\Implementation\DateDataFormatter.cs" />
+    <Compile Include="Domain\ImportFormatting\DataFormatters\Implementation\DecimalDataFormatter.cs" />
+    <Compile Include="Domain\ImportFormatting\DataFormatters\IDataFormatter.cs" />
+    <Compile Include="Domain\ImportFormatting\DataFormatters\Implementation\BooleanDataFormatter.cs" />
+    <Compile Include="Domain\ImportFormatting\DataFormatters\Implementation\IntegerDataFormatter.cs" />
+    <Compile Include="Domain\ImportFormatting\DataFormatters\Implementation\ManagedDataFormatter.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\Implementation\DefaultColumnSingleFormatCommand.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\Implementation\DefaultColumnValueFormatCommand.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\Implementation\DeleteByValueFormatCommand.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\Implementation\DeleteColumnFormatCommand.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\Implementation\DeleteColumnIfBlankFormatCommand.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\Implementation\DeleteRowsFormatCommand.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\Implementation\FormatColumnValuesFormatCommand.cs" />
+    <Compile Include="Domain\ImportFormatting\Generators\IValueGenerator.cs" />
+    <Compile Include="Domain\ImportFormatting\Generators\Implementation\ManagedValueGenerator.cs" />
+    <Compile Include="Domain\ImportFormatting\Generators\Implementation\RandomGuidValueGenerator.cs" />
+    <Compile Include="Domain\ImportFormatting\Generators\Implementation\RandomNumberValueGenerator.cs" />
+    <Compile Include="Domain\ImportFormatting\Generators\Implementation\UniqueDateValueGenerator.cs" />
+    <Compile Include="Domain\ImportFormatting\Generators\Implementation\UniqueNumberValueGenerator.cs" />
+    <Compile Include="Domain\ImportFormatting\Generators\ValueGeneratorTypes.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\IImportFormatCommand.cs" />
+    <Compile Include="Domain\ImportFormatting\DataFormatters\IManagedDataFormatter.cs" />
+    <Compile Include="Domain\ImportFormatting\IManagedDataSource.cs" />
+    <Compile Include="Domain\ImportFormatting\Generators\IManagedValueGenerator.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\AImportFormatCommand.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\Implementation\MergeColumnsFormatCommand.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\Implementation\RenameColumnFormatCommand.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\Implementation\ReplaceByValueFormatCommand.cs" />
+    <Compile Include="Domain\ImportFormatting\Commands\Implementation\UnifyColumnsFormatCommand.cs" />
+    <Compile Include="Domain\ImportFormatting\Staging\StagingImportRepository.cs" />
+    <Compile Include="Domain\ImportFormatting\Staging\IStagingImportRepository.cs" />
+    <Compile Include="Domain\ImportFormatting\UploadedData\IUploadedFileInfoRepository.cs" />
+    <Compile Include="Domain\ImportFormatting\UploadedData\IUploadedDataInfoRepository.cs" />
+    <Compile Include="Domain\ImportFormatting\UploadedData\UploadedFileInfoRepository.cs" />
+    <Compile Include="Domain\ImportFormatting\UploadedData\UploadedDataInfoRepository.cs" />
+    <Compile Include="Mapping.cs" />
+    <Compile Include="Domain\POCO\ImportData.cs" />
+    <Compile Include="Domain\POCO\ImportFormatFileCommandScope.cs" />
+    <Compile Include="Domain\POCO\ImportFormatCommandScope.cs" />
+    <Compile Include="Domain\POCO\ImportFormatCommandTypes.cs" />
+    <Compile Include="Domain\POCO\ImportFileMetaData.cs" />
+    <Compile Include="Domain\POCO\ImportFormatMetaData.cs" />
+    <Compile Include="Domain\ImportFormatting\Staging\StagingImport.cs" />
+    <Compile Include="Domain\ImportFormatting\UploadedData\UploadedDataInfo.cs" />
+    <Compile Include="Domain\ImportFormatting\UploadedData\UploadedFileInfo.cs" />
+    <Compile Include="Domain\ImportConverterDataContext.cs" />
+    <Compile Include="Migrations\201712061820191_00001-Afas-ImportConverter.cs" />
+    <Compile Include="Migrations\201712061820191_00001-Afas-ImportConverter.Designer.cs">
+      <DependentUpon>201712061820191_00001-Afas-ImportConverter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ImportConverterInstaller.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Afas\Afas.csproj">
+      <Project>{f1c8c3d8-94da-403e-a5e7-a9c58486deed}</Project>
+      <Name>Afas</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201712061820191_00001-Afas-ImportConverter.resx">
+      <DependentUpon>201712061820191_00001-Afas-ImportConverter.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
+  <Import Project="..\packages\OctoPack.3.0.42\tools\OctoPack.targets" Condition="Exists('..\packages\OctoPack.3.0.42\tools\OctoPack.targets')" />
+  <Target Name="EnsureOctoPackImported" BeforeTargets="BeforeBuild" Condition="'$(OctoPackImported)' == ''">
+    <Error Condition="!Exists('..\packages\OctoPack.3.0.42\tools\OctoPack.targets') And ('$(RunOctoPack)' != '' And $(RunOctoPack))" Text="You are trying to build with OctoPack, but the NuGet targets file that OctoPack depends on is not available on this computer. This is probably because the OctoPack package has not been committed to source control, or NuGet Package Restore is not enabled. Please enable NuGet Package Restore to download them. For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\OctoPack.3.0.42\tools\OctoPack.targets') And ('$(RunOctoPack)' != '' And $(RunOctoPack))" Text="OctoPack cannot be run because NuGet packages were restored prior to the build running, and the targets file was unavailable when the build started. Please build the project again to include these packages in the build. You may also need to make sure that your build server does not delete packages prior to each build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

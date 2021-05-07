@@ -1,0 +1,38 @@
+﻿.v_menu {
+    height: 100%;
+    z-index: 1;
+    top: 225px;
+    left: 0;
+    background-color: transparent;
+    border-bottom: #ddd;
+    overflow-x: hidden;
+    padding-top: 10px;
+    font-family: "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+    text-align: left;
+    font-weight: 200;
+    max-width: 300px;
+}
+
+.v_menu a {
+
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #6e6d71 ;
+    display: block;
+
+}
+
+.v_menu a:hover {
+
+    text-decoration: underline;
+	border-left: #eb0029 4px solid;
+
+}
+
+.admin {
+
+      bottom: 80px;
+      position:absolute;
+    
+}

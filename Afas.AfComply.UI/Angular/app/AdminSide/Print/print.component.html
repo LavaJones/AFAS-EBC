@@ -1,0 +1,20 @@
+﻿Please select an employer to send to Print:
+
+<select [(ngModel)]="selectedEmployer">
+    <option *ngFor="let emp of employers"
+            [value]="emp.EncryptedId">
+        {{ emp.EmployerName }}
+    </option>
+</select>
+
+<button (click)="printClick(); $event.preventDefault()">Client Authorized Print</button>
+<button (click)="reprintClick(); $event.preventDefault()">Client Authorized RE-Print ALL</button>
+<br />
+<button (click)="adminPrintClick(); $event.preventDefault()">Admin Print</button>
+<button (click)="adminReprintClick(); $event.preventDefault()">Admin RE-Print ALL</button>
+<br />
+<button (click)="pdfPrintClick(); $event.preventDefault()">PDF Only Print</button>
+
+<br />
+<br />
+<button (click)="print1094Click(); $event.preventDefault()">PDF 1094 Print</button>

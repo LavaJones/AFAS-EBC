@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ad64f7933f09488b86a75e17525fd5b8" Name="Diagram1" ZoomLevel="77">
+        <EntityTypeShape EntityType="AcaModel.employee" Width="1.5" PointX="5.25" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcaModel.employee_dependents" Width="1.5" PointX="7.5" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcaModel.employee_insurance_offer" Width="1.5" PointX="12.5" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcaModel.EmployeeMeasurementAverageHour" Width="1.5" PointX="7.5" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcaModel.employer" Width="1.5" PointX="0.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcaModel.insurance_carrier" Width="1.5" PointX="7.5" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcaModel.insurance_contribution" Width="1.5" PointX="10.25" PointY="24.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcaModel.insurance_coverage" Width="1.5" PointX="9.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcaModel.insurance_coverage_editable" Width="1.5" PointX="12.75" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcaModel.plan_year" Width="1.5" PointX="3" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcaModel.View_air_replacement_employee_monthly_detail" Width="2.875" PointX="3.875" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AcaModel.View_insurance_change_events" Width="2.5" PointX="7" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="AcaModel.FK_employee_dependents_employee" ManuallyRouted="false" />
+        <AssociationConnector Association="AcaModel.fk_employee_employerID" ManuallyRouted="false" />
+        <AssociationConnector Association="AcaModel.FK_employee_plan_year" ManuallyRouted="false" />
+        <AssociationConnector Association="AcaModel.FK_employee_plan_year1" ManuallyRouted="false" />
+        <AssociationConnector Association="AcaModel.FK_employee_plan_year2" ManuallyRouted="false" />
+        <AssociationConnector Association="AcaModel.FK_employee_py_archives_employee" ManuallyRouted="false" />
+        <AssociationConnector Association="AcaModel.FK_EmployeeMeasurementAverageHours_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="AcaModel.FK_insurance_coverage_editable_employee" ManuallyRouted="false" />
+        <AssociationConnector Association="AcaModel.FK_insurance_coverage_employee" ManuallyRouted="false" />
+        <AssociationConnector Association="AcaModel.FK_insurance_coverage_editable_employee_dependents" ManuallyRouted="false" />
+        <AssociationConnector Association="AcaModel.FK_insurance_coverage_employee_dependents" ManuallyRouted="false" />
+        <AssociationConnector Association="AcaModel.FK_employee_py_archives_employee_py_archives" ManuallyRouted="false" />
+        <AssociationConnector Association="AcaModel.FK_employee_py_archives_employer" ManuallyRouted="false" />
+        <AssociationConnector Association="AcaModel.FK_employee_py_archives_insurance_contribution" ManuallyRouted="false" />
+        <AssociationConnector Association="AcaModel.FK_employee_py_archives_plan_year" ManuallyRouted="false" />
+        <AssociationConnector Association="AcaModel.FK_insurance_coverage_editable_employer" ManuallyRouted="false" />
+        <AssociationConnector Association="AcaModel.fk_planyear_employerID" ManuallyRouted="false" />
+        <AssociationConnector Association="AcaModel.FK_insurance_coverage_insurance_carrier" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AcaModel.View_insurance_change_events_details" Width="3.875" PointX="10" PointY="5.375" />
+        <EntityTypeShape EntityType="AcaModel.View_air_replacement_PartIII_details" Width="1.5" PointX="23.375" PointY="5.75" />
+        <EntityTypeShape EntityType="AcaModel.View_full_insurance_coverage" Width="3.125" PointX="14.375" PointY="5.75" />
+        <EntityTypeShape EntityType="AcaModel.View_air_replacement_EmployeeMonthlyDetailsPreFiltered" Width="1.5" PointX="15.375" PointY="12.75" />
+        <EntityTypeShape EntityType="AcaModel.View_air_replacement_EmployeeYearlyDetails" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="AcaModel.insurance" Width="1.5" PointX="5.25" PointY="25.5" />
+        <AssociationConnector Association="AcaModel.FK_employee_py_archives_insurance" />
+        <AssociationConnector Association="AcaModel.FK_insurance_contribution_insurance" />
+        <AssociationConnector Association="AcaModel.FK_insurance_plan_year" />
+        <EntityTypeShape EntityType="AcaModel.View_1094Part1" Width="1.5" PointX="17.375" PointY="12.75" />
+        <EntityTypeShape EntityType="AcaModel.View_1094Part4" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AcaModel.View_1094Part3" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AcaModel.View_1094Part2" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="AcaModel.EmployerTaxYearTransmissionStatu" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AcaModel.EmployerTaxYearTransmission" Width="1.5" PointX="3" PointY="15.125" />
+        <AssociationConnector Association="AcaModel.FK_EmployerTaxYearTransmission_Employer" />
+        <AssociationConnector Association="AcaModel.FK_EmployerTaxYearTransmissionStatus_EmployerTaxYearTransmission" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

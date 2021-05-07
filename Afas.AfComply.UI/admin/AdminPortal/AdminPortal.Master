@@ -1,0 +1,186 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminPortal.Master.cs" Inherits="Afas.AfComply.UI.admin.AdminPortal.AdminPortalMaster" %>
+
+<%@ Import Namespace="Afas.AfComply.Domain" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="~/default.css" />
+    <link rel="stylesheet" type="text/css" href="~/menu.css" />
+    <link rel="stylesheet" type="text/css" href="~/v_menu.css" />
+
+    <style type="text/css">
+        .leftColumn {
+            float: left;
+            width: 495px;
+            background-color: white;
+        }
+
+        .rightColumn {
+            float: right;
+            width: 495px;
+            background-color: white;
+        }
+
+        .smallCheckBox input {
+            width: 10px;
+            height: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="container">
+            <div id="header">
+                <a href="~/securepages/Default.aspx" runat="server">
+                    <img src="<%= Page.ResolveUrl(Branding.LogoUri) %>" style="height: 70px" alt="<%= Branding.ProductName %> Logo" class="logo" />
+                </a>
+                <ul id="toplinks">
+                    <li>Need Help? Call <%= Branding.PhoneNumber %></li>
+                    <li>
+                        <asp:Literal ID="LitUserName" runat="server"></asp:Literal>
+                    </li>
+                    <li>
+                        <asp:Button ID="BtnLogout" CssClass="btn" runat="server" Text="Log Out" OnClick="BtnLogout_Click" UseSubmitBehavior="false" />
+                    </li>
+                </ul>
+            </div>
+            <div id="nav2">
+                <nav>
+                    <ul>
+                        <li><a href='~/admin/default.aspx' runat="server">Home</a></li>
+                        <li><a href='#'>Views</a>
+                            <ul>
+                                <li><a href='~/admin/view_employers.aspx' runat="server">Employer Status</a></li>
+                                <li><a href='~/admin/view_employers_meas_status.aspx' runat="server">Employer Measurement Period Status</a></li>
+                                <li><a href='~/admin/view_payroll_import.aspx' runat="server">Payroll Import Alerts</a></li>
+                                <li><a href='~/admin/view_employer_employees.aspx' runat="server">Employee Import Alerts</a></li>
+                                <li><a href='~/admin/AdminPortal/TrendingDataExport.aspx'>Trending Data Export</a></li>
+                                <li><a href='/admin/employers_certified.aspx'>Employers Certified</a></li>
+                                <li><a href='~/admin/Employee_Insurance_Offer.aspx' runat="server">Employee Insurance Offers</a></li>
+                                <li><a href='/admin/AdminPortal/EmployersCurrentTransmissionTaxYearStatus.aspx'>Employers Current Transmission Tax Year Status</a></li>
+                                <li><a href='/admin/AdminPortal/EmployerTransmissionTaxYearStatuses.aspx'>Employer Transmission Tax Year Statuses</a></li>
+                            </ul>
+                        </li>
+                        <li><a href='~/admin/view_payroll_import.aspx' runat="server">Import</a>
+                            <ul>
+                                <% if (Feature.BulkConverterEnabled)
+                                    { %>
+                                <li><a href='~/admin/AdminPortal/ImportConverter.aspx' runat="server">Bulk Data Convert</a></li>
+                                <li><a href='~/admin/AdminPortal/LegacyConverter.aspx' runat="server">Legacy Format Converter</a></li>
+                                <li><a href='~/admin/AdminPortal/OfferMissingEmployees.aspx' runat="server">Offer File Missing Employees</a></li>
+                                <li><a href='~/admin/AdminPortal/ConfirmNewHires.aspx' runat="server">Confirm New Hires</a></li>
+                                <li><a href='~/admin/AdminPortal/ClearOfferAlerts.aspx' runat="server">Clear Offer Alerts</a></li>
+                                <li><a href='~/admin/import_offer.aspx' runat="server">Import Offer File</a></li>
+                                <li><a href='~/admin/AdminPortal/RunCalculations.aspx' runat="server">Run Nightly Calculations</a></li>
+                                <li><a href='~/admin/AdminPortal/InactiveEmployeeAveHours.aspx' runat="server">Inactive Employee Average Hours</a></li>
+                                <li><a href='~/admin/AdminPortal/employee_classification_insurance.aspx' runat="server">Employee Classification Insurance</a></li>
+                                <li><a href='~/admin/AdminPortal/DOB_import.aspx' runat="server">Import DOB</a></li>
+                                <li><a href='~/admin/AdminPortal/CarrierAlertExport.aspx' runat="server">Export Carrier Alerts</a></li>
+                                <li><a href='~/admin/AdminPortal/DownloadEmployerFile.aspx' runat="server">Download Employer File</a></li>
+
+                                <% } %>
+                                <li><a href='~/admin/import_payroll.aspx' runat="server">Payroll</a></li>
+                                <li><a href='~/admin/import_payroll_batch_modification.aspx' runat="server">Payroll Batch Mod</a></li>
+                                <li><a href='~/admin/import_employee.aspx' runat="server">Employee</a></li>
+                                <li><a href='~/admin/import_employee_che.aspx' runat="server">Employee Che</a></li>
+                                <li><a href='~/admin/import_grosspay.aspx' runat="server">Pay Code</a></li>
+                                <li><a href='~/admin/import_hrstatus.aspx' runat="server">HR Status</a></li>
+                                <li><a href='~/admin/import_employee_class.aspx' runat="server">Employee Class</a></li>
+                                <li><a href='~/admin/batch_management.aspx' runat="server">Batch Management</a></li>
+                                <li><a href='~/admin/import_insurance.aspx' runat="server">Insurance Offer</a></li>
+                                <li><a href='~/admin/import_insurance_change_event.aspx' runat="server">Insurance Offer Change Event</a></li>
+                                <li><a href='~/admin/import_insurance_discrepancy.aspx' runat="server">Insurance Offer Discrepancies</a></li>
+                                <li><a href='~/admin/import_insurance_carrier.aspx' runat="server">Insurance Carrier Report</a></li>
+                            </ul>
+                        </li>
+                        <% if (Feature.BulkConverterEnabled)
+                            { %>
+                        <li><a href='#'>Setup</a>
+                            <ul>
+                                <li><a href="~/admin/AdminPortal/NewEmployer.aspx" runat="server">Add New Employer</a></li>
+                                <li><a href='~/admin/AdminPortal/EmployeeType.aspx' runat="server">Employee Types</a></li>
+                                <li><a href='~/admin/AdminPortal/EmployeeClassifications.aspx' runat="server">Classifications</a></li>
+                                <li><a href='~/admin/AdminPortal/EmployerPlanYear.aspx' runat="server">Plan Years</a></li>
+                                <li><a href='~/admin/AdminPortal/EmployerMeasurementPeriods.aspx' runat="server">Measurement Periods</a></li>
+                                <li><a href='~/admin/AdminPortal/PlanYearGroup.aspx' runat="server">Plan Year Groups</a></li>
+                                <li><a href='~/admin/AdminPortal/ClonePlanYear.aspx' runat="server">Clone A PlanYear</a></li>
+                                <li><a href='~/admin/AdminPortal/EmployerImp.aspx' runat="server">Initial Measurement</a></li>
+                                <li><a href='~/admin/AdminPortal/EditEmployees.aspx' runat="server">Edit Employees</a></li>
+                            </ul>
+                        </li>
+                        <% } %>
+                        <li><a href='#'>Plan Year</a>
+                            <ul>
+                                <li><a href='~/admin/admin_py_rollover_prep.aspx' runat="server">Measurement Period Prep</a></li>
+                                <li><a href='~/admin/admin_py_rollover_multi_prep.aspx' runat="server">Dual Measurement Period Prep</a></li>
+                                <li><a href='~/admin/admin_py_rollover.aspx' runat="server">Plan Year</a></li>
+                                <li><a href='~/admin/AdminAuto_py_rollover.aspx' runat="server">Auto Rollover from Admin to Stability</a></li>
+                            </ul>
+                        </li>
+                        <li><a href='#'>IRS</a>
+                            <ul>
+                                <li><a href='~/admin/AdminPortal/ToggleIRS.aspx' runat="server">Enable IRS Reporting Menu for a Client</a></li>
+                                <li><a href='~/admin/AdminPortal/IRSStaging1095.aspx' runat="server">Transfer 1095 Information</a></li>
+                                <li><a href='~/admin/AdminPortal/DisableReview.aspx' runat="server">Disable IRS Review</a></li>
+                                <li><a href='~/admin/AdminPortal/IRSStaging1095Link.aspx' runat="server">Enable IRS Review</a></li>
+                                <li><a href='~/admin/employers_certified.aspx' runat="server">Company Approval to proceed to CASS/Print</a></li>
+                                <li><a href='~/admin/AdminPortal/SkipCASS.aspx' runat="server">Authorize skipping the CASS Process and Go to Print</a></li>
+                                <li><a href='~/admin/AdminPortal/IRS1095PDFStaging.aspx' runat="server">Import Printed 1095's</a></li>
+                                <li><a href='~/admin/AdminPortal/EmployersCurrentPdfStatus.aspx' runat="server">Employer Printed PDF Count</a></li>
+                                <li><a href='~/admin/AdminPortal/EmployersCurrentNotPrintedPdf.aspx' runat="server">Employer Unprinted PDF Count</a></li>
+                                <li><a href='~/admin/AdminPortal/EmployersCurrentNotTransmit.aspx' runat="server">Employer Untransmitted Count</a></li>
+                                <li><a href='~/admin/AdminPortal/EmployersCurrentTransmissionTaxYearStatus.aspx' runat="server">Current Transmission Status For All Employers</a></li>
+                                <li><a href='~/admin/AdminPortal/EmployersCurrentIRSTaxYearStatus.aspx' runat="server">Employers Current IRS Tax Year Status</a></li>
+                                <li><a href='~/admin/AdminPortal/EmployerTransmissionTaxYearStatuses.aspx' runat="server">Detailed History of an Employer's Transmission Status</a></li>
+                                <li><a href='~/admin/AdminPortal/EmployerIRSTransmission.aspx' runat="server">Transmit 1094/95C Forms to IRS</a></li>
+                                <li><a href='~/admin/AdminPortal/StageForCorrectionRetransmission.aspx' runat="server">Stage For Correction Retransmission</a></li>
+                                <li><a href='/admin/admin_10941095_receipt_import.aspx'>Record 1094/95C Transmission Receipt ID</a></li>
+                                <li><a href='/admin/admin_10941095_ack_import.aspx'>Record 1094/95C Transmission Status</a></li>
+                            </ul>
+                        </li>
+                        <li><a href='#'>Verification</a>
+                            <ul>
+                                <li><a href='~/admin/payroll_duplicate_checker.aspx' runat="server">Duplicate Payroll</a></li>
+                                <li><a href='~/admin/insurance_alert_generator.aspx' runat="server">Generate Missing Insurance Alerts</a></li>
+                                <li><a href="~/admin/AdminPortal/mergeDuplicateEmployee.aspx" runat="server">Merge Duplicate Employees</a></li>
+                            </ul>
+                        </li>
+                        <li><a href='#'>Formatting</a>
+                            <ul>
+                                <li><a href='~/admin/formatting_adp_payroll.aspx' runat="server">ADP Payroll</a></li>
+                                <li><a href='~/admin/formatting_adp_demographic.aspx' runat="server">ADP Dem</a></li>
+                                <li><a href='~/admin/formatting_skyward_demographic.aspx' runat="server">Sky Dem</a></li>
+                                <li><a href='~/admin/formatting_skyward_payroll.aspx' runat="server">Sky Payroll</a></li>
+                                <li><a href='~/admin/formatting_smartHR_payroll.aspx' runat="server">SHR Payroll</a></li>
+                                <li><a href='~/admin/formatting_smartHR_demographic.aspx' runat="server">SHR Dem</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+            <div style="clear: both;">&nbsp;</div>
+            <div id="footer">
+                Copyright &copy; <%= Branding.CopyrightYears %> <a href="<%= Branding.CompanyWebSite %>"><%= Branding.CompanyName %></a> - All Rights Reserved   
+                <br />
+                <div style="clear: both;">&nbsp;</div>
+            </div>
+        </div>
+    </form>
+    <script>
+        setTimeout(AutoLogout, <%= Feature.AutoLogoutTime %> );
+        
+        function AutoLogout() {
+            alert("<%= Branding.AutoLogoutMessage %>");
+            window.location = window.location.href;
+        }
+    </script>
+</body>
+</html>

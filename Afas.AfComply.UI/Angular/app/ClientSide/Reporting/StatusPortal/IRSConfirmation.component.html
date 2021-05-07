@@ -1,0 +1,183 @@
+﻿<div>
+    <h1>Confirmation Page</h1>
+    <h2>Step 1: Confirm Data is Correct</h2>
+
+    <p>
+        Please review the information below, make any necessary adjustments, and then Confirm at the bottom of this page that everything is correct.
+        Note that if you discover issues with the data described below after pushing the Confirm button, you may have to do significant rework.
+        As such, please take time to complete this step carefully.
+    </p>
+
+    <h3>A. Confirm Legal Name</h3>
+
+    <p>
+        Your employer’s legal name in {{ Branding.ProductName }} must match the records the IRS has for your organization.
+        Mistakes in the legal name can result in rejection of your IRS filing.
+        Please ensure that the name listed below is exactly the name the IRS would have on file for your organization,
+        including punctuation, spacing, etc. You may correct any errors <a href="/securepages/s_setup.aspx">here</a>.
+    </p>
+
+    <label style="color:White;background-color:#eb0029;font-weight:bold">{{EmployerName}}</label>
+
+    <h3>B. Confirm IRS Contact</h3>
+    <p>
+        Please ensure that you have <b>ONLY ONE</b> individual designated as your IRS contact.
+        This person should be able to answer any questions from employees or the IRS about your forms.
+        Please verify the name and contact information listed below is correct for the person you want to designate as your organization’s IRS contact.
+        You may correct errors <a href="/securepages/s_setup.aspx">here</a>.
+    </p>
+    <table>
+        <colgroup>
+            <col style="width:25%" />
+            <col style="width:25%;" />
+            <col style="width:150%" />
+        </colgroup>
+        <thead style="color:black;background-color:#eb0029;font-weight:bold;">
+            <tr>
+                <td><span style="color:White;font-weight:bold">First Name</span></td>
+                <td><span style="color:White;font-weight:bold">	Last Name</span></td>
+                <td><span style="color:White;font-weight:bold">	Phone</span></td>
+            </tr>
+        </thead>
+        <tr *ngFor="let User of IRSConfirmationUser">
+            <td>
+                {{
+User.User_First_Name
+                }}
+            </td>
+            <td>
+                {{User.User_Last_Name}}
+            </td>
+            <td>
+                {{User.User_Phone}}
+            </td>
+        </tr>
+    </table>
+    <h3>C. Confirm Data </h3>
+
+    <p>
+        All data files must be complete and loaded into  {{ Branding.ProductName }} before you can complete the certification process to approve and send your forms.
+        Data requirements for your organization may differ depending upon whether you have elected to use a “Tracking and Reporting” or “Reporting Only” method for 2020.
+    </p>
+    <p style="margin-left: 25px"><span style="font-weight: bold">In this first step, you will only be required to review the data in your demographic and payroll files, ensuring that these are complete and accurate.</span></p>
+    <p>
+        As a reminder, here are the complete data requirements. Some of these items will be reviewed in the Form 1095-C certification.
+    </p>
+
+
+    <p style="margin-left: 25px"><span style="font-weight: bold">For all customers: </span>Up to date employee demographic (census) information</p>
+
+    <p style="margin-left: 25px"><span style="font-weight: bold">For all customers: </span>Upload completed offer file(s) no later than November 6</p>
+
+    <p style="margin-left: 25px"><span style="font-weight: bold">For customers with self-funded coverage only: </span>Upload completed carrier file no later than December 11 </p>
+
+    <p>
+        You may load any missing data via the File Import process <a href="/securepages/transfer.aspx">here</a>.
+    </p>
+
+    <h3>D. Confirm Affordability Safe Harbor Codes</h3>
+
+    <p>
+        Employees receiving a 1095-C form will be assigned an affordability safe harbor code, if applicable, using the employee class information stored in AFcomply.
+        Please review and verify that the affordability safe harbor designated for each employee classification shown below is correct.
+        (More information is available in the <a href="{{ Feature.IrsInstructionsLink2017 }}">detailed instruction guide</a>.)
+    </p>
+
+    <p>
+        It is important to remember that sometimes no safe harbor may apply; if this is the case,
+        you should leave it blank and not assign any affordability safe harbor to that employee class.
+        For the right safe harbor to appear on the form, employees must be assigned to the correct employee class on the employee demographic (census) data file.
+        Your employee classes and safe harbor codes, if any, are shown below. If you need to make changes to the safe harbor codes, start <a href="/securepages/s_setup.aspx">here</a>
+        and follow the instructions in the instruction guide.
+    </p>
+
+    <h3>Safe Harbor Codes</h3>
+    <label ID="lblMessage"></label>
+
+    <table>
+        <thead style="color:black;background-color:#eb0029;font-weight:bold;">
+            <tr>
+                <td><span style="color:White;font-weight:bold">Classification</span></td>
+                <td><span style="color:White;font-weight:bold">Safe Harbor</span></td>
+            </tr>
+        </thead>
+        <tr *ngFor="let SafeHarborCodes of IRSConfirmationSafeHarborCodes" [ngStyle]="{'background-color': SafeHarborCodes.CLASS_2GInValidPrice ? 'red' : '', 'color':'black'}">
+
+            <td>
+                {{SafeHarborCodes.CLASS_DESC}}
+            </td>
+            <td>
+                {{SafeHarborCodes.CLASS_AFFORDABILITY_CODE}}
+
+            </td>
+
+        </tr>
+    </table>
+    <br />
+
+    <h3>E. Clear All Alerts</h3>
+    <p>
+        <label *ngIf="DoAlertExists">You have alerts that need to be cleared; click <a href="/securepages/alerts.aspx">here</a> to review and process.</label>
+        <label *ngIf="!DoAlertExists">You do not have any alerts that need to be cleared; you may proceed to the next step.</label>
+    </p>
+
+    <br />
+    <h3>F. Confirm Non-Full Time Employee Status for Recent New Hires </h3>
+
+    <p>
+        Please review and confirm that the following employees are not considered full-time;
+        these are individuals who were hired since the beginning of your last ongoing measurement period who were not classified at the time of hire as full-time.
+        You may adjust the status for an individual by using the drop down boxes below.If an employee has terminated employment, a term date must be provided for the employee.
+        Selecting “Termed” from the drop down menu will not save the status. You may add term dates by going to the Edit Employees page.
+    </p>
+
+    <table>
+        <colgroup>
+            <col style="width:50%" />
+            <col style="width:100%;" />
+        </colgroup>
+        <thead style="color:black;background-color:#eb0029;">
+            <tr>
+                <td><span style="color:White;font-weight:bold">Employee Name</span></td>
+                <td><span style="color:White;font-weight:bold">ACA status</span></td>
+            </tr>
+        </thead>
+        <tr *ngFor="let Employee of IRSConfirmationEmployee">
+            <td>
+                {{Employee.EMPLOYEE_LAST_NAME}}{{","}} {{ Employee.EMPLOYEE_FIRST_NAME}}
+            </td>
+            <td>
+                <select [(ngModel)]="Employee.EMPLOYEE_ACT_STATUS_ID">
+                    <option *ngFor="let key of statusKeys" [value]="key" [label]="acaStatuses[key]"></option>
+                </select>
+            </td>
+        </tr>
+    </table>
+
+    <br />
+    <button class="btn" (click)="onClickSave(); $event.preventDefault()">Save</button>
+
+    <br />
+    <h3>G. Confirm Spousal Offer is Correct</h3>
+
+    <p>
+        If you make a conditional offer of coverage for spouses of eligible employees, you need to confirm that has been recorded correctly in the system.
+        A conditional offer is an offer of coverage that is subject to one or more reasonable,
+        objective conditions (for example, the employer offers to cover an employee’s spouse only if the spouse is not eligible for coverage under Medicare or a group health plan sponsored by another employer).
+        If an eligible employee is able to enroll their spouse without limitation, you do not have a conditional offer and there is nothing further you need to do on this step;
+        you may proceed to the next step
+    </p>
+
+    <p>
+        If spouses are conditionally eligible under your plan(s),
+        click <a href="/securepages/s_setup.aspx">here</a> and follow the instructions in the <a href="{{Feature.IrsInstructionsLink2017}}">guide</a> to ensure that in the Medical Plan setup,
+        under the question “Is this plan offered to spouses?”, you have selected “Conditionally”.
+    </p>
+
+    <h3>H. Confirmation </h3>
+    <p>
+        I hereby confirm I have reviewed the information above and it is complete and accurate to the best of my knowledge.
+    </p>
+    <br />
+    <button class="btn" (click)="onClickConfirm(); $event.preventDefault()">Confirm</button>
+</div>

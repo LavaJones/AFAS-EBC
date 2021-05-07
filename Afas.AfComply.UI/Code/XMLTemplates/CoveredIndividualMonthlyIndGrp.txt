@@ -1,0 +1,14 @@
+﻿<CoveredIndividualMonthlyIndGrp>
+	<JanuaryInd>@@JanuaryInd@@</JanuaryInd>
+	<FebruaryInd>@@FebruaryInd@@</FebruaryInd>
+	<MarchInd>@@MarchInd@@</MarchInd>
+	<AprilInd>@@AprilInd@@</AprilInd>
+	<MayInd>@@MayInd@@</MayInd>
+	<JuneInd>@@JuneInd@@</JuneInd>
+	<JulyInd>@@JulyInd@@</JulyInd>
+	<AugustInd>@@AugustInd@@</AugustInd>
+	<SeptemberInd>@@SeptemberInd@@</SeptemberInd>
+	<OctoberInd>@@OctoberInd@@</OctoberInd>
+	<NovemberInd>@@NovemberInd@@</NovemberInd>
+	<DecemberInd>@@DecemberInd@@</DecemberInd>
+</CoveredIndividualMonthlyIndGrp>

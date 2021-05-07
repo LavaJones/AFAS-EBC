@@ -1,0 +1,10 @@
+﻿<CorrectedRecordRecipientGrp>
+    <CorrectedUniqueRecordId>@@CorrectedUniqueRecordId@@</CorrectedUniqueRecordId>
+    <CorrectedRecRecipientPrsnName>
+		<PersonFirstNm>@@PersonFirstNm@@</PersonFirstNm>
+		<PersonMiddleNm>@@PersonMiddleNm@@</PersonMiddleNm>
+		<PersonLastNm>@@PersonLastNm@@</PersonLastNm>
+		<SuffixNm>@@SuffixNm@@</SuffixNm>
+    </CorrectedRecRecipientPrsnName>
+    <CorrectedRecordPayeeTIN>@@CorrectedRecordPayeeTIN@@</CorrectedRecordPayeeTIN>
+</CorrectedRecordRecipientGrp>

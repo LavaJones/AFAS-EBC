@@ -1,0 +1,74 @@
+﻿
+
+
+/* mat table*/
+.headerRow {
+background-color: lightgray;/*: #e91c2c; */
+width: 1170px;
+height: 40px;
+line-height: 20px;
+padding: 10px;
+text-align: left;
+vertical-align: bottom;
+}
+
+.headerColumn {
+    color: white;
+font-weight: bold;
+text-align: left;
+vertical-align: bottom;
+}
+
+/* Info Box */
+.infoBoxWrapper {
+    width: 1170px; 
+    padding: 10px;
+}
+
+.infoBoxHeader {
+    width: 100%; 
+    padding: 0px 10px 0px 10px;
+}
+
+
+/* Search Box */
+.searchBoxWrapper {
+    background-color: rgba(242,242,242,1); 
+    width: 1170px; 
+    padding: 10px;
+}
+
+.searchBoxHeader {
+    width: 100%; 
+    padding: 0px 10px 0px 10px;
+}
+
+.searchBoxLeft {
+    float: left; 
+    width: 560px; 
+    padding: 0px 10px 10px 10px;
+}
+
+.searchBoxRight {
+    float: right; 
+    width: 560px; 
+    padding: 0px 10px 10px 10px;
+}
+
+.searchBoxLeft input {
+    width: 170px; 
+    padding: 10px;
+}
+
+.searchBoxRight input {
+    width: 80px; 
+    padding: 10px;
+}
+
+.searchBoxRight select {
+    width: 150px; 
+    padding: 10px;
+}
+
+/* Row above the 1095 editing table */
+

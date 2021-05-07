@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Form1094CUpstreamDetail recordType="String" lineNum="0">
+  <SubmissionId>1</SubmissionId>
+  <OriginalUniqueSubmissionId>1|1</OriginalUniqueSubmissionId>
+  <TaxYr>2015</TaxYr>
+  <BusinessName>
+    <BusinessNameLine1Txt>&amp;</BusinessNameLine1Txt>
+    <BusinessNameLine2Txt>&amp;</BusinessNameLine2Txt>
+  </BusinessName>
+  <BusinessNameControlTxt>&amp;</BusinessNameControlTxt>
+  <EmployerEIN>000000000</EmployerEIN>
+  <ContactNameGrp>
+    <PersonFirstNm>-</PersonFirstNm>
+    <PersonMiddleNm>-</PersonMiddleNm>
+    <PersonLastNm>-</PersonLastNm>
+    <SuffixNm>-</SuffixNm>
+  </ContactNameGrp>
+  <ContactPhoneNum>0000000000</ContactPhoneNum>
+  <MailingAddressGrp>
+    <USAddressGrp>
+      <AddressLine1Txt>0</AddressLine1Txt>
+      <AddressLine2Txt>0</AddressLine2Txt>
+      <CityNm>A</CityNm>
+      <USStateCd>AL</USStateCd>
+      <USZIPCd>00000</USZIPCd>
+      <USZIPExtensionCd>0000</USZIPExtensionCd>
+    </USAddressGrp>
+  </MailingAddressGrp>
+  <Form1095CAttachedCnt>2</Form1095CAttachedCnt>
+</Form1094CUpstreamDetail>

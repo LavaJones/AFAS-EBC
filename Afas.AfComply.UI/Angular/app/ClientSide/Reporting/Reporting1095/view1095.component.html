@@ -1,0 +1,289 @@
+﻿<div *blockUI="'list-1095'">
+    <div class="infoBoxWrapper">
+        <div class="infoBoxHeader">
+            <h2>Step 3. Certify 1095-C Information</h2>
+        </div>
+
+        <div class="container infoBoxValues" fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center" style="font-weight:bold;">
+            <div fxFlex="25%">
+                Percent Reviewed
+                <br />
+                <div class="progress-bar-container">
+                    <mat-progress-bar class="progress-1095"
+                                      [mode]="determinate"
+                                      [value]="ReviewedPercent * 100.0">
+                        {{ReviewedPercent * 100.0}}
+                    </mat-progress-bar>
+                </div>
+            </div>
+            <div fxFlex="25%">
+                Total Employees
+                <br />
+                {{TotalCount}}
+            </div>
+            <div fxFlex="25%">
+                # Employees Receiving 1095-C
+                <br />
+                {{Reciving1095Count}}
+            </div>
+            <div fxFlex="25%">
+                # 1095-C Forms Left to Review
+                <br />
+                {{(Reciving1095Count - ReviewedCount)}}
+            </div>
+        </div>
+    </div>
+
+    <div class="infoBoxWrapper">
+        <div class="searchBoxLeft">
+            Select Tax Year
+            <mat-form-field floatPlaceholder="never">
+                <mat-select [(ngModel)]="selectedTaxYear"
+                            (selectionChange)="refreshList(selectedTaxYear)">
+                    <mat-option *ngFor="let year of TaxYears | dictionary"
+                                [value]="year.value">
+                        {{ year.key }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+
+
+        <div class="searchBoxRight" style="text-align: center;">
+            To edit your 1095-C information in a CSV file, use the links below.
+            <br />
+            <button (click)="ExportFile()">Export File</button>
+            <div draggable="true" ngClass="{{dragAreaClass}}">
+                <input type="file"
+                       (change)="onFileChange($event)" />
+
+            </div>
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+
+    <div class="searchBoxWrapper container" fxLayoutGap="10px" fxLayout>
+        <div fxFlex="30%">
+            <h3>Employee Search</h3>
+            <mat-form-field floatPlaceholder="never">
+                <input matInput placeholder="Search Name or SSN" (keyup)="applyFilterNameSSN($event.target.value)" />
+            </mat-form-field>
+        </div>
+
+        <div fxFlex="60%">
+            <h3>Filter By</h3>
+            <div fxLayout fxLayoutAlign="center" fxLayoutGap="10px">
+                <mat-form-field floatPlaceholder="never" fxFlex="40%">
+                    <mat-select [(ngModel)]="receiving1095Filter" (selectionChange)="applyFilterReceiving($event.value)">
+                        <mat-option value="">All Employees</mat-option>
+                        <mat-option value="True">Receiving 1095-C</mat-option>
+                        <mat-option value="False">Not Receiving 1095-C</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field floatPlaceholder="never" fxFlex="40%">
+                    <input matInput placeholder="Filter Classification" (keyup)="applyFilterClassification($event.target.value)" />
+                </mat-form-field>
+            </div>
+
+            <br style="clear: both;" />
+        </div>
+    </div>
+
+    <div class="infoBoxWrapper">
+        <div class="searchBoxLeft">
+            <br style="clear: left;" />
+
+            <button (click)="ReviewedPage()">Mark Page Reviewed</button>
+            <button (click)="UnReviewedPage()">Mark Page Un-Reviewed</button>
+
+        </div>
+        <div class="searchBoxRight">
+            <mat-paginator #paginator
+                           [length]="tablelength"
+                           [pageIndex]="0"
+                           [pageSize]="5"
+                           [pageSizeOptions]="[5, 10, 25, 100]">
+            </mat-paginator>
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    <table mat-table [dataSource]="EmployeeDataSource" matSort>
+
+        <ng-container matColumnDef="Reviewed">
+            <mat-header-cell *matHeaderCellDef mat-sort-header fxFlex="2 2 10%" class="headerColumn"> Reviewed </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.Reviewed}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="Receiving1095">
+            <mat-header-cell *matHeaderCellDef mat-sort-header fxFlex="1 1 5%" class="headerColumn"> Receiving 1095 </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.Receiving1095}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="FirstName">
+            <mat-header-cell *matHeaderCellDef mat-sort-header fxFlex="2 2 10%" class="headerColumn">First </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.FirstName}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="MiddleName">
+            <mat-header-cell *matHeaderCellDef mat-sort-header fxFlex="1 1 5%" class="headerColumn">Middle</mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.MiddleName}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="LastName">
+            <mat-header-cell *matHeaderCellDef mat-sort-header fxFlex="2 2 10%" class="headerColumn">Last</mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.LastName}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="SsnHidden">
+            <mat-header-cell *matHeaderCellDef mat-sort-header fxFlex="2 2 10%" class="headerColumn"> SSN </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.SsnHidden}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="Address">
+            <mat-header-cell *matHeaderCellDef mat-sort-header fxFlex="3 3 15%" class="headerColumn"> Address </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.Address}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="City">
+            <mat-header-cell *matHeaderCellDef mat-sort-header fxFlex="2 2 10%" class="headerColumn"> City </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.City}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="State">
+            <mat-header-cell *matHeaderCellDef mat-sort-header fxFlex="1 1 5%" class="headerColumn"> State </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{GetStateAbrev(row.State)}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="Zip">
+            <mat-header-cell *matHeaderCellDef mat-sort-header fxFlex="2 2 10%" class="headerColumn"> Zip </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.Zip}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="HireDate">
+            <mat-header-cell *matHeaderCellDef mat-sort-header fxFlex="1 1 5%" class="headerColumn"> Hire Date </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.HireDate | date:'shortDate'}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="TermDate">
+            <mat-header-cell *matHeaderCellDef mat-sort-header fxFlex="1 1 5%" class="headerColumn"> Term Date </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.TermDate | date:'shortDate'}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="expandedDetail">
+            <mat-cell *matCellDef="let row" style="padding:0px; padding-left: 0px;">
+                <mat-accordion style="width:1175px;">
+                    <mat-expansion-panel [expanded]="row.isExpanded"
+                                         (opened)="row.isExpanded = true"
+                                         (closed)="row.isExpanded = false" style="width:100%;">
+                        <mat-expansion-panel-header style="width:100%;">
+                            <mat-panel-title style="width:100%; font-size:12px;">
+                                <span fxFlex="2 2 10%">
+                                    <button *ngIf="row.Reviewed == false" (click)="Reviewed(row);toggleRow(row);$event.preventDefault();"> Reviewed </button>
+                                    <button *ngIf="row.Reviewed == true" (click)="UnReviewed(row);$event.preventDefault();"> Un-review </button>
+                                </span>
+                                <span fxFlex="1 1 5%">
+                                    &nbsp;{{row.Receiving1095}}
+                                </span>
+                                <span fxFlex="1 1 5%">
+                                    &nbsp;{{row.FirstName}}
+                                </span>
+                                <span fxFlex="2 2 10%">
+                                    &nbsp;{{row.MiddleName}}
+                                </span>
+                                <span fxFlex="1 1 5%">
+                                    &nbsp;{{row.LastName}}
+                                </span>
+                                <span fxFlex="2 2 10%">
+                                    &nbsp;{{row.SsnHidden}}
+                                </span>
+                                <span fxFlex="2 2 10%">
+                                    &nbsp;{{row.Address}}
+                                </span>
+                                <span fxFlex="3 3 15%">
+                                    &nbsp;{{row.City}}
+                                </span>
+                                <span fxFlex="2 2 10%">
+                                    &nbsp;{{GetStateAbrev(row.State)}}
+                                </span>
+                                <span fxFlex="1 1 5%">
+                                    &nbsp;{{row.Zip}}
+                                </span>
+                                <span fxFlex="1 1 5%">
+                                    &nbsp;{{row.HireDate | date:'shortDate'}}
+                                </span>
+                                <span fxFlex="1 1 5%">
+                                    &nbsp;{{row.TermDate | date:'shortDate'}}
+                                </span>
+                                <span fxFlex="1 1 5%">
+                                    &nbsp;
+                                </span>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+
+                        <ng-template matExpansionPanelContent>
+                            <edit1095Details [employee]="getProto(row)" (summaryUpdated)="refreshSummary()">
+                            </edit1095Details>
+                        </ng-template>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </mat-cell>
+        </ng-container>
+
+        <mat-row *matRowDef="let row; columns: ['expandedDetail'];"
+                 class="container"
+                 fxLayout
+                 fxLayoutAlign="center"
+                 fxLayoutGap="10px"
+                 fxLayoutGap.xs="0">
+        </mat-row>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"
+                        class="headerRow container"
+                        fxLayout
+                        fxLayout.xs="column"
+                        fxLayoutAlign="center"
+                        fxLayoutGap="10px"
+                        fxLayoutGap.xs="0">
+        </mat-header-row>
+
+    </table>
+
+    <div class="infoBoxWrapper">
+        <div class="searchBoxLeft">
+            <br style="clear: left;" />
+
+            <button (click)="ReviewedPage()">Mark Page Reviewed</button>
+            <button (click)="UnReviewedPage()">Mark Page Un-Reviewed</button>
+        </div>
+        <br style="clear: both;" />
+    </div>
+
+    <div class="infoBoxWrapper">
+
+        <div class="infoBoxHeader">
+            <p>
+                <span style="font-weight: bold;">DISCLAIMER:</span> As Agreed upon in the Service Agreement as an Employer You Are Ultimately Responsible for the Final Review and Approval of the Data Collected via the System. <span style="color: red;"> {{Branding.CompanyShortName}}</span> Is Entitled to Rely upon the Accuracy and Completeness of Information Provided to <span style="color: red;">{{Branding.CompanyShortName}}</span> by the Employer, or on Behalf of Employer, Regardless of the Form of the Information (E.G., Oral, Written, Electronic, Etc.). <span style="color: red;">{{Branding.CompanyShortName}}</span> Is Not Responsible for Negative Consequences Resulting from Inaccurate, Incomplete, or Voluntary Overrides, Etc. Information Provided to <span style="color: red;">{{Branding.CompanyShortName}}</span> by the Employer, or on Behalf of Employer.
+            </p>
+            <p>
+                As an Authorized Agent of the Employer, I Attest That I Have Reviewed and I Approve the Submission of This Data for 1095 Production and Submission to the IRS.
+            </p>
+
+        </div>
+
+
+
+        <br style="clear: both;" />
+    </div>
+    <div>
+        <button (click)="Finalize1095();">Finalize</button>
+    </div>
+    <br />
+
+    <div>
+        <button (click)="printClick();" [disabled]="canPrint()? false:true">Print</button>
+        <button (click)="pdfPrintClick();" [disabled]="canPdfPrint()? false:true"> Generate PDF Only</button>
+    </div>
+</div>

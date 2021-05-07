@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{54AF3C84-E6CB-46DA-83E5-0006BC6BBFDC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Afas.AfComply</RootNamespace>
+    <AssemblyName>Afas.AfComply</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Afc.Core, Version=2.0.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afc.Core.2.0.10.0\lib\net40\Afc.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Afc.Framework, Version=2.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afc.Framework.2.0.6.0\lib\net40\Afc.Framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Afc.Marketing.Core, Version=4.1.0.103, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afc.Marketing.Core.4.1.0.103\lib\net45\Afc.Marketing.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Core, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.3.2.2\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Facilities.Logging, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.LoggingFacility.3.2.0\lib\net45\Castle.Facilities.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Services.Logging.Log4netIntegration, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core-log4net.3.2.0\lib\net45\Castle.Services.Logging.Log4netIntegration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Windsor.3.2.1\lib\net45\Castle.Windsor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\ProjectArtifacts\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Application\AfComplyApplicationInstaller.cs" />
+    <Compile Include="Application\CsvConverterService.cs" />
+    <Compile Include="Application\ICsvConverterService.cs" />
+    <Compile Include="Application\ILegacyConverterService.cs" />
+    <Compile Include="Application\IImportExcelConverter.cs" />
+    <Compile Include="Application\LegacyConverterService.cs" />
+    <Compile Include="Domain\encrypt.cs" />
+    <Compile Include="Application\Validators\FeinDataValidator.cs" />
+    <Compile Include="Domain\DataTableExtensionMethods.cs" />
+    <Compile Include="Domain\Feature.cs" />
+    <Compile Include="Domain\IListExtensionMethods.cs" />
+    <Compile Include="Domain\InsuranceType.cs" />
+    <Compile Include="Domain\POCO\CoveredIndividual.cs" />
+    <Compile Include="Domain\POCO\IRSStatus.cs" />
+    <Compile Include="Domain\POCO\TaxYear1095CApproval.cs" />
+    <Compile Include="Domain\POCO\TaxYear1095CCorrection.cs" />
+    <Compile Include="Domain\POCO\tax_year_1095c_correction_exception.cs" />
+    <Compile Include="Domain\StatusCodeEnum.cs" />
+    <Compile Include="Domain\SystemSettings.cs" />
+    <Compile Include="Domain\Transmitter.cs" />
+    <Compile Include="Domain\AcaStatus.cs" />
+    <Compile Include="Domain\BooleanExtensionMethods.cs" />
+    <Compile Include="Domain\Branding.cs" />
+    <Compile Include="Domain\ConverterHelper.cs" />
+    <Compile Include="Domain\DataRowCollectionExtensionMethods.cs" />
+    <Compile Include="Domain\IListOfAverageHoursExtensionMethods.cs" />
+    <Compile Include="Domain\Mapping\AfComplyFormatExtendedOfferDictionary.cs" />
+    <Compile Include="Domain\Mapping\AfComplyFormatExtendedCarrierDictionary.cs" />
+    <Compile Include="Domain\Mapping\LegacyFormatCoverageDictionary.cs" />
+    <Compile Include="Domain\Mapping\LegacyFormatOhioAffordPayrollDictionary.cs" />
+    <Compile Include="Domain\Mapping\LegacyFormatPayrollDictionary.cs" />
+    <Compile Include="Domain\Mapping\LegacyFormatDemographicsDictionary.cs" />
+    <Compile Include="Domain\Mapping\LegacyImportsDictionary.cs" />
+    <Compile Include="Application\ImportExcelConverter.cs" />
+    <Compile Include="Application\Staging\EmployeeDataRowParserExtensionMethods.cs" />
+    <Compile Include="Application\Staging\EmployeeDataTableParserExtensionMethods.cs" />
+    <Compile Include="Domain\DataValidation.cs" />
+    <Compile Include="Domain\DbNullExtensionMethods.cs" />
+    <Compile Include="Domain\ImportExtensionMethods.cs" />
+    <Compile Include="Domain\OfferChangeEvents.cs" />
+    <Compile Include="Domain\POCO\AverageHours.cs" />
+    <Compile Include="Domain\POCO\EmployersCurrentTaxYearTransmissionStatus.cs" />
+    <Compile Include="Domain\POCO\IRSEntity.cs" />
+    <Compile Include="Domain\POCO\EmployerTaxYearTransmission.cs" />
+    <Compile Include="Domain\POCO\EmployerTaxYearTransmissionStatus.cs" />
+    <Compile Include="Domain\POCO\EmployerTaxYearTransmissionStatusQueue.cs" />
+    <Compile Include="Domain\POCO\PlanYearGroup.cs" />
+    <Compile Include="Domain\POCO\BreakInService.cs" />
+    <Compile Include="Domain\POCO\ImportFormatStructure.cs" />
+    <Compile Include="Domain\POCO\ImputFormatCommand.cs" />
+    <Compile Include="Domain\POCO\ManualFileProcessQueue.cs" />
+    <Compile Include="Domain\POCO\measurementBreakInService.cs" />
+    <Compile Include="Domain\POCO\QueueStatusEnum.cs" />
+    <Compile Include="Domain\POCO\StagingImport.cs" />
+    <Compile Include="Domain\NullExtensionMethods.cs" />
+    <Compile Include="Domain\POCO\UploadedFileInfo.cs" />
+    <Compile Include="Domain\IDataReaderExtensionMethods.cs" />
+    <Compile Include="Domain\StringDataValidationExtensionMethods.cs" />
+    <Compile Include="Domain\TransmissionStatusEnum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Afas.ImportConverter\Afas.ImportConverter.csproj">
+      <Project>{62A14AEB-F7BB-4607-AFA4-38E04DA85EB2}</Project>
+      <Name>Afas.ImportConverter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Afas\Afas.csproj">
+      <Project>{f1c8c3d8-94da-403e-a5e7-a9c58486deed}</Project>
+      <Name>Afas</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Import Project="..\packages\OctoPack.3.0.42\tools\OctoPack.targets" Condition="Exists('..\packages\OctoPack.3.0.42\tools\OctoPack.targets')" />
+  <Target Name="EnsureOctoPackImported" BeforeTargets="BeforeBuild" Condition="'$(OctoPackImported)' == ''">
+    <Error Condition="!Exists('..\packages\OctoPack.3.0.42\tools\OctoPack.targets') And ('$(RunOctoPack)' != '' And $(RunOctoPack))" Text="You are trying to build with OctoPack, but the NuGet targets file that OctoPack depends on is not available on this computer. This is probably because the OctoPack package has not been committed to source control, or NuGet Package Restore is not enabled. Please enable NuGet Package Restore to download them. For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\OctoPack.3.0.42\tools\OctoPack.targets') And ('$(RunOctoPack)' != '' And $(RunOctoPack))" Text="OctoPack cannot be run because NuGet packages were restored prior to the build running, and the targets file was unavailable when the build started. Please build the project again to include these packages in the build. You may also need to make sure that your build server does not delete packages prior to each build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

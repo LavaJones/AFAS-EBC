@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html> 
+
+<head>
+     
+<title>Basic Bootstrap 3.3.6 layout</title>
+
+<meta charset="utf-8">
+
+<meta name = "viewport" content ="width = device - width, initial-scale = 1">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+	<title>AFcomply - American Fidelity Administrative Services, LLC</title>
+    
+     
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    
+     
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+     
+	<link rel="stylesheet" type="text/css" href="css/StyleSheet1.css"> 
+
+	
+    
+     
+	<script type="text/javascript" src="/_js/inactivityMessage/screenOverlay.js">
+        
+
+    </script>
+    <script type="text/javascript" language="javascript">
+        function BtnLogin_Click() {
+            $("btn-javascript").click();
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+
+
+<div id="container">
+  <div id="header" style="background-color:#eb0029; height: 60px;"><img src="1header.png" alt="red pill background" height= "90"/> </div>
+
+<form name="LoginPage" action="securepages/Default.aspx" method="get">
+
+  <div class="imgcontainer">
+    <img src="AFcomply-Logo-459x136.png" class="container">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="TxtUserName" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="TxtPassword" required>
+        
+  <button id="btn-javascript" onclick="BtnLogin_Click()" >Login</button>
+     
+
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label><br>
+	<button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  
+  </div>
+  
+    </div>
+
+</form>
+ 
+    <asp:Button ID="BtnLogin" runat="server" Text="Submit" CssClass="btn" Style="position: relative;" OnClick="BtnLogin_Click" />
+
+
+
+<div class="widecontainer">
+
+  <h1 style="text-align:justify;color:#eb0029;">Employee Eligibility Tracking and Reporting, Simplified</h1>
+  <p style="text-align:justify;">Complying with the requirements of the Patient Protection and Affordable Care Act (ACA) is complex, time
+    consuming, and often confusing.<br> This includes the &nbsp;ACA Tracking and Reporting responsibilities, which
+    added to your workload.</p>
+
+ 
+     <h3 style="text-align: justify;color:#eb0029;">ACA Tracking Responsibilities </h3>
+ 
+     <p style="text-align:justify;">Large employers (with 50+ full-time equivalent employees) that  fail to offer adequate and affordable coverage to substantially all full-time  employees could trigger an ACA Employer Mandate Penalty. This requires you to  know who is deemed to be a full-time employee as defined by the ACA, and how many  of them are eligible for coverage during any given month. </p>
+  
+    <h3 style="text-align: justify;color:#eb0029;">ACA Reporting Responsibilities </h3>
+ 
+     <p style="text-align:justify;">These same employers also have reporting requirements to provide  information to employees and the Internal Revenue Service (IRS) regarding  employee access to Minimum Essential Coverage (MEC) under Internal Revenue Code  (IRC) Section 6055 and information of an offer of adequate and affordable  coverage under IRC Section 6056, with respect to full-time employees as defined  by the ACA. </p>
+  
+    <h3 style="text-align: justify;color:#eb0029;">Our Tools and Personalized Consulting Provide You with Peace of Mind </h3>
+ 
+     <p style="text-align:justify;">AFcomply is a service offered through American  Fidelity Administrative Services (AFAS) that combines tracking and reporting  software with a dedicated ACA Compliance Support Team.</p>
+
+<p style="color:#888">&nbsp;</p>
+
+</div>
+
+</body> 
+</html>
+

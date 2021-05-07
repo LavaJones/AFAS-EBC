@@ -1,0 +1,56 @@
+﻿table {
+    color: black;
+    font-family: Arial, Arial, Helvetica, sans-serif,;
+    width: 150%;
+    float: left;
+}
+
+td {
+    padding: 5px;
+}
+
+th {
+    padding: 5px;
+}
+
+.example-tree-invisible {
+    display: none;
+}
+
+.example-tree ul,
+.example-tree li {
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+}
+
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#Tree {
+    float: left;
+    padding: 50px;
+    width: 350px;
+}
+
+#DownloadFile {
+    float: left;
+    width: 500px;
+}
+#buttons {
+    float:right;
+}
+
+#UploadFile {
+    width: 200px;
+}
+
+.button {
+    width: 140px;
+    background-color: #eb0029;
+    color: white;
+    border: 3px solid #f44336
+}

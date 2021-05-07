@@ -1,0 +1,14 @@
+﻿<div mat-dialog-content>
+
+    <div *ngFor="let part2 of part2s">
+        <button mat-button [mat-dialog-close]="part2">Use This</button>
+
+        <div style="pointer-events: none;opacity: 0.4;">
+
+            <part2-edit [part2s]="[part2]"></part2-edit>
+        </div>
+    </div>
+</div>
+<div mat-dialog-actions>
+    <button (click)="onNoClick()" tabindex="-1">Cancel</button>
+</div>

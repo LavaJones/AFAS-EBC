@@ -1,0 +1,70 @@
+﻿@{
+
+    IEnumerable<string> fileEntries = Enumerable.Empty<string>();
+    fileEntries = Directory.EnumerateFiles(Server.MapPath("~/Scripts/adminDist"));
+    fileEntries = fileEntries.OrderByDescending(file=>file);
+
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="/Administration/">
+    <title>AFcomply</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="-1">
+
+    <script>
+        window['__Zone_enable_cross_context_check'] = true;
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="~/Content/portal.css" />
+
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+    }
+
+    <div id="body">
+        <div id="body">
+
+            @Html.Partial("Header")
+            <div class="wrap">
+                <div id="content-block" class="container, content">
+
+                    @RenderBody()
+
+                    @{
+
+                        foreach (string fileName in fileEntries)
+                        {
+                            FileInfo fileInformation = new FileInfo(fileName);
+
+                            if (".map" != fileInformation.Extension && ".html" != fileInformation.Extension && ".css" != fileInformation.Extension)
+                            {
+                                <script src="~/Scripts/adminDist/@fileInformation.Name"></script>
+                            }
+                            if (".css" == fileInformation.Extension)
+                            {
+                                <link rel="stylesheet" type="text/css" href="~/Scripts/adminDist/@fileInformation.Name" />
+                            }
+                        }
+                    }
+
+
+                    <div class="row">
+                        @Html.Partial("Footer")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

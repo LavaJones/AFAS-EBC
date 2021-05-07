@@ -1,0 +1,8 @@
+﻿<CorrectedSubmissionInfoGrp>
+	<CorrectedUniqueSubmissionId>@@CorrectedUniqueSubmissionId@@</CorrectedUniqueSubmissionId>
+	<CorrectedSubmissionPayerName>
+		<BusinessNameLine1Txt>@@BusinessNameLine1Txt@@</BusinessNameLine1Txt>
+		<BusinessNameLine2Txt>@@BusinessNameLine2Txt@@</BusinessNameLine2Txt>
+	</CorrectedSubmissionPayerName>
+	<CorrectedSubmissionPayerTIN>@@CorrectedSubmissionPayerTIN@@</CorrectedSubmissionPayerTIN>
+</CorrectedSubmissionInfoGrp>

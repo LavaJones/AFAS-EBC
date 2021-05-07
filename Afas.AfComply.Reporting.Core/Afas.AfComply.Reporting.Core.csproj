@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3B984996-6CF8-4948-82FD-34D50610EC02}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Afas.AfComply.Reporting.Core</RootNamespace>
+    <AssemblyName>Afas.AfComply.Reporting.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Afc.Core, Version=2.0.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afc.Core.2.0.10.0\lib\net40\Afc.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Afc.Framework">
+      <HintPath>..\packages\Afc.Framework.2.0.6.0\lib\net40\Afc.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Afc.Marketing.Core, Version=4.1.0.103, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afc.Marketing.Core.4.1.0.103\lib\net45\Afc.Marketing.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Core, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.3.2.2\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Facilities.Logging, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.LoggingFacility.3.2.0\lib\net45\Castle.Facilities.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Services.Logging.Log4netIntegration, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core-log4net.3.2.0\lib\net45\Castle.Services.Logging.Log4netIntegration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Windsor.3.2.1\lib\net45\Castle.Windsor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\ProjectArtifacts\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Models\Approved1094FinalPart1Model.cs" />
+    <Compile Include="Models\Approved1094FinalPart3Model.cs" />
+    <Compile Include="Models\Approved1094FinalPart4Model.cs" />
+    <Compile Include="Models\Approved1095FinalModel.cs" />
+    <Compile Include="Models\Approved1095FinalPart2Model.cs" />
+    <Compile Include="Models\Approved1095FinalPart3Model.cs" />
+    <Compile Include="Models\Correction1094Model.cs" />
+    <Compile Include="Models\Correction1095Model.cs" />
+    <Compile Include="Models\Employee1095detailsPart2Model.cs" />
+    <Compile Include="Models\Employee1095detailsPart3Model.cs" />
+    <Compile Include="Models\Employee1095summaryModel.cs" />
+    <Compile Include="Models\Employer1094detailsPart3Model.cs" />
+    <Compile Include="Models\Employer1094detailsPart4Model.cs" />
+    <Compile Include="Models\Employer1094SummaryModel.cs" />
+    <Compile Include="Models\EmployerModel.cs" />
+    <Compile Include="Models\FileCabinetAccessModel.cs" />
+    <Compile Include="Models\FileCabinetFolderInfoModel.cs" />
+    <Compile Include="Models\FileCabinetInfoModel.cs" />
+    <Compile Include="Models\Print1094Model.cs" />
+    <Compile Include="Models\PrintBatchModel.cs" />
+    <Compile Include="Models\Print1095Model.cs" />
+    <Compile Include="Models\Transmission1094Model.cs" />
+    <Compile Include="Models\Transmission1095Model.cs" />
+    <Compile Include="Models\TimeFrameModel.cs" />
+    <Compile Include="Models\VerificationModel.cs" />
+    <Compile Include="Models\Void1094Model.cs" />
+    <Compile Include="Models\Void1095Model.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request\BaseManyRequest.cs" />
+    <Compile Include="Request\BaseGuidRequest.cs" />
+    <Compile Include="Request\Employee1095PrintRequest.cs" />
+    <Compile Include="Request\FileCabinetFilesRequests.cs" />
+    <Compile Include="Request\NewChildItemRequest.cs" />
+    <Compile Include="Request\SingleEmployee1095summaryForTaxYearRequest.cs" />
+    <Compile Include="Request\GetByGuidRequest.cs" />
+    <Compile Include="Request\GetManyRequest.cs" />
+    <Compile Include="Request\EmployerTaxYearRequest.cs" />
+    <Compile Include="Request\TimeFramesForYearRequest.cs" />
+    <Compile Include="Request\DeleteItemRequest.cs" />
+    <Compile Include="Request\BaseModelRequest.cs" />
+    <Compile Include="Request\UpdateManyPart2Request.cs" />
+    <Compile Include="Request\UpdateManyRequest.cs" />
+    <Compile Include="Request\UpdateItemRequest.cs" />
+    <Compile Include="Request\NewItemRequest.cs" />
+    <Compile Include="Response\UIMessageResponse.cs" />
+    <Compile Include="Response\BasicResponse.cs" />
+    <Compile Include="Response\ModelItemResponse.cs" />
+    <Compile Include="Response\ModelListResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Afas.AfComply\Afas.AfComply.csproj">
+      <Project>{54af3c84-e6cb-46da-83e5-0006bc6bbfdc}</Project>
+      <Name>Afas.AfComply</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Afas\Afas.csproj">
+      <Project>{f1c8c3d8-94da-403e-a5e7-a9c58486deed}</Project>
+      <Name>Afas</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Import Project="..\packages\OctoPack.3.0.42\tools\OctoPack.targets" Condition="Exists('..\packages\OctoPack.3.0.42\tools\OctoPack.targets')" />
+  <Target Name="EnsureOctoPackImported" BeforeTargets="BeforeBuild" Condition="'$(OctoPackImported)' == ''">
+    <Error Condition="!Exists('..\packages\OctoPack.3.0.42\tools\OctoPack.targets') And ('$(RunOctoPack)' != '' And $(RunOctoPack))" Text="You are trying to build with OctoPack, but the NuGet targets file that OctoPack depends on is not available on this computer. This is probably because the OctoPack package has not been committed to source control, or NuGet Package Restore is not enabled. Please enable NuGet Package Restore to download them. For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\OctoPack.3.0.42\tools\OctoPack.targets') And ('$(RunOctoPack)' != '' And $(RunOctoPack))" Text="OctoPack cannot be run because NuGet packages were restored prior to the build running, and the targets file was unavailable when the build started. Please build the project again to include these packages in the build. You may also need to make sure that your build server does not delete packages prior to each build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

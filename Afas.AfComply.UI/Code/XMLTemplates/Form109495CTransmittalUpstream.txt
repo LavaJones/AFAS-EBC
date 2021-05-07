@@ -1,0 +1,8 @@
+﻿<n1:Form109495CTransmittalUpstream
+    xmlns="urn:us:gov:treasury:irs:ext:aca:air:ty20"
+    xmlns:irs="urn:us:gov:treasury:irs:common"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:n1="urn:us:gov:treasury:irs:msg:form1094-1095Ctransmitterupstreammessage"
+    xsi:schemaLocation="urn:us:gov:treasury:irs:msg:form1094-1095Ctransmitterupstreammessage IRS-Form1094-1095CTransmitterUpstreamMessage.xsd">
+		@@Form1094CUpstreamDetail@@
+</n1:Form109495CTransmittalUpstream>

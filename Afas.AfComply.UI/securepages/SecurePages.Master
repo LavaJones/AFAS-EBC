@@ -1,0 +1,278 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SecurePages.master.cs" Inherits="Afas.AfComply.UI.securepages.SecurePages" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <%@ Import Namespace="Afas.AfComply.Domain" %>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/popper.js"></script>
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+
+    <title><%= Branding.ProductName %> - <%= Branding.CompanyName %></title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            overflow: hidden;
+            background-color: #eb0029;
+            height: 10px;
+        }
+
+            .header a {
+                float: left;
+                color: black;
+                text-align: center;
+                text-decoration: none;
+                list-style-type: none;
+                font-size: 30px;
+            }
+
+        div.img {
+            content: url(C:\Development\Afas.AfComply\branches\Sanja2\Afas.AfComply.UI\images);
+        }
+
+        #toplinks {
+            text-decoration: none;
+            list-style: none;
+            float: right;
+            font-weight: bold;
+        }
+
+        .header a.logo {
+            font-size: 25px;
+            /*font-weight: bold;*/
+        }
+
+        .header a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .header a.active {
+            background-color: dodgerblue;
+            color: white;
+        }
+
+        .header-right {
+            float: right;
+        }
+
+        @media screen and (max-width: 500px) {
+            .header a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .header-right {
+                float: none;
+            }
+        }
+
+        ul {
+            overflow: hidden;
+            background-color: none;
+            align-content: baseline;
+            float: none;
+            width: 70%;
+            text-align: center;
+            float: none;
+        }
+
+        li {
+            position: center;
+            align-content: center;
+            text-align: center;
+            display: inline-block;
+            border-right: 1px solid #ddd;
+            padding: 15px;
+        }
+
+            li:last-child {
+                border-right: none;
+            }
+
+            li a {
+                display: block;
+                color: #6E6D71;
+                text-align: center;
+                text-decoration: none;
+            }
+
+                li a:hover:not(.active) {
+                    text-decoration: underline;
+                }
+
+        .active {
+            border-left: 4px #EB0029;
+        }
+
+        .mega-menu-bar {
+            background-color: #eee;
+            content: " ";
+            display: block;
+            min-width: 100%;
+            height: 7px;
+            overflow: hidden;
+            position: absolute;
+            z-index: 10;
+            -moz-transition: height 250ms ease;
+            -o-transition: height 250ms ease;
+            -webkit-transition: height 250ms ease;
+            transition: height 250ms ease;
+            -webkit-transition-delay: 500ms;
+            transition-delay: 500ms;
+        }
+
+        .btn {
+            width: 103px;
+            background-color: #eb0029;
+            color: white;
+            border: 3px solid #f44336;
+        }
+
+        .logo {
+            margin: 0;
+            float: left;
+        }
+
+
+
+        #container {
+            position: relative;
+            width: 1510px;
+            padding: 10px;
+            overflow: auto;
+            min-height: 1500px;
+            top: 4px;
+        }
+
+        #Topcontainer {
+            position: relative;
+            width: 1510px;
+            overflow: auto;
+            min-height: 156px;
+            left: 0px;
+        }
+
+        #footer {
+            width: 1030px;
+            text-align: center;
+            margin: 10px auto;
+            padding-bottom: 15px;
+            clear: both;
+        }
+
+            #footer a {
+                color: #eb0029;
+                font-weight: normal;
+            }
+
+        #bottomcontainer {
+            position: relative;
+            width: 1510px;
+            overflow: auto;
+            min-height: 156px;
+            left: 0px;
+        }
+
+        .w3-badge, .w3-tag {
+            background-color: #eb0029;
+            color: #fff;
+            display: inline-block;
+            padding-left: 8px;
+            padding-right: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <div class=" image">
+            </div>
+        </div>
+        <div id="Topcontainer">
+            <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ToolkitScriptManager>
+            <div class="header-right" style="padding-right: 80px;">
+                <div id="toplinks">
+                    <p style="font-size: 12px;">Need Help? Call <%= Branding.PhoneNumber %></p>
+                    <p style="font-size: 12px;">
+                        <asp:Literal ID="LitUserName" runat="server"></asp:Literal>
+                    </p>
+                    <p style="font-size: 12px;">
+                        <asp:Literal ID="LitEmployer" runat="server"></asp:Literal>
+                    </p>
+                    <p>
+                        <asp:Button ID="BtnLogout" CssClass="btn" runat="server" Text="Log Out" OnClick="BtnLogout_Click" UseSubmitBehavior="false" />
+                    </p>
+                    
+                    <p style="font-size: 12px;">
+                        <a href="passwordreset.aspx" >Password Reset</a>
+                        <asp:HiddenField ID="HfDistrictID" runat="server" />
+                    </p>
+                </div>
+            </div>
+
+            <div style="padding-left: 20px">
+                <a href="/securepages/">
+                    <img src="<%= Page.ResolveUrl(Branding.LogoUri) %>" style="height: 70px" alt="<%= Branding.ProductName %> Logo" class="logo" />
+                </a>
+                <div class=" nav">
+                    <ul>
+                        <li><a href="default.aspx">Home</a></li>
+                        <li><a href="e_find.aspx">Employee</a></li>
+                        <li><a href="r_reporting.aspx">Reports</a></li>
+                        <li><a href="s_setup.aspx">Employer Setup</a></li>
+                        <%if (true == Feature.QlikEnabled)
+                            {  %>
+                        <li><a href="alerts.aspx">Alerts <span class="w3-badge">
+                            <asp:Literal ID="CountAlert" runat="server" Text=""></asp:Literal></span></a></li>
+                        <% } %>
+                        <li><a href="<%= Feature.HomePageExternalLink %>">Help</a></li>
+                        <li><a href="<%= Feature.GuidePageExternalLink %>" target="_blank">How-to Guides</a></li>
+                        <li><a href="/FileCabinet/ViewFileCabinet">File Cabinet</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="container">
+            <asp:ContentPlaceHolder ID="bodycontent" runat="server">
+
+
+            </asp:ContentPlaceHolder>
+
+        </div>
+
+        <div id="bottomcontainer">
+            <div id="footer">
+                Copyright &copy; <%= Branding.CopyrightYears %> <a href="<%= Branding.CompanyWebSite %>"><%= Branding.CompanyName %></a> - All Rights Reserved   
+                <br />
+                <div style="clear: both;">&nbsp;</div>
+            </div>
+        </div>
+
+    </form>
+
+    <script>
+        setTimeout(AutoLogout, <%= Feature.AutoLogoutTime %> );
+
+        function AutoLogout() {
+            alert("<%= Branding.AutoLogoutMessage %>");
+            window.location = window.location.href;
+        }
+    </script>
+
+</body>
+</html>

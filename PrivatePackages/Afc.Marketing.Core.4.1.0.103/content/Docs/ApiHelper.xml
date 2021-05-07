@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<docs>
+	<type id="ApiHelper">
+		<chapter id="ctor">			
+			<exception cref="System.ArgumentNullException">Either <paramref name="logger" />, <paramref name="runtimeConfiguration" />, or both are null.</exception>
+		</chapter>
+		<chapter id="EnsureIsGoodCall">
+			<exception cref="System.ArgumentOutOfRangeException">Specified resource could not be located.</exception>
+			<exception cref="System.Exception">An operational error has occurred.</exception>
+		</chapter>
+		<chapter id="EnsureIsGoodReturn">
+			<exception cref="System.Exception">An error has occurred during processing.</exception>
+		</chapter>
+		<chapter id="Get1">
+			<exception cref="System.Exception">An operational error has occurred.</exception>
+		</chapter>
+		<chapter id="GetRouteUrl">
+			<exception cref="InvalidOperationException">A route could not be found matching <paramref name="routeKey" />.</exception>
+			<remarks>
+				This method does not validate the value of the arguments for the method call.
+			</remarks>
+		</chapter>
+		<chapter id="GetRouteUrl2">
+			<exception cref="InvalidOperationException">A route could not be found matching <paramref name="routeKey" />.</exception>			
+			<remarks>
+				This method does not validate the value of the arguments for the method call.
+			</remarks>
+		</chapter>
+		<chapter id="GetRouteUrl3">
+			<exception cref="InvalidOperationException">A route could not be found matching <paramref name="routeKey" />.</exception>			
+			<remarks>
+				This method does not validate the value of the arguments for the method call.
+			</remarks>
+		</chapter>
+    <chapter id="GetRouteUrl3">
+			<exception cref="InvalidOperationException">A route could not be found matching <paramref name="routeKey" />.</exception>			
+			<remarks>
+				This method does not validate the value of the arguments for the method call.
+			</remarks>
+		</chapter>
+    <chapter id="GetRouteUrl4">
+      <exception cref="InvalidOperationException">
+        A route could not be found matching <paramref name="routeKey" />.
+      </exception>
+      <remarks>
+        This method does not validate the value of the arguments for the method call.
+      </remarks>
+    </chapter>
+	</type>
+	<type id="IApiHelper">
+		<chapter id="interface">
+			<remarks>
+				Types which implement this contract should follow the convention of...
+			</remarks>
+		</chapter>
+		<chapter id="Retrieve`1">
+			<remarks>
+				Implementors should throw an <see cref="ArgumentNullException" /> if the value of 
+				<paramref name="routeKey" /> is null or an empty <see cref="System.String" />.
+			</remarks>
+			<exception cref="ArgumentNullException"><paramref name="routeKey" /> is null or empty.</exception>
+		</chapter>
+    <chapter id="Retrieve`2">
+      <remarks>
+        Implementors should throw an <see cref="ArgumentNullException" /> if the value of
+        <paramref name="routeKey" /> is null or an empty <see cref="System.String" />.
+      </remarks>
+      <exception cref="ArgumentNullException">
+        <paramref name="routeKey" /> is null or empty.
+      </exception>
+      <remarks>
+        Implementors should throw an <see cref="ArgumentNullException" /> if the value of
+        <paramref name="key" /> is null or an empty <see cref="System.String" />.
+      </remarks>
+      <exception cref="ArgumentNullException">
+        <paramref name="key" /> is null or empty.
+      </exception>
+      <remarks>
+        Implementors should throw an <see cref="ArgumentNullException" /> if the value of
+        <paramref name="pageNumber" /> is null.
+      </remarks>
+      <exception cref="ArgumentNullException">
+        <paramref name="pageNumber" /> is null.
+      </exception>
+      <remarks>
+        Implementors should throw an <see cref="ArgumentNullException" /> if the value of
+        <paramref name="pageSize" /> is null.
+      </remarks>
+      <exception cref="ArgumentNullException">
+        <paramref name="pageSize" /> is null.
+      </exception>
+    </chapter>
+	</type>
+</docs>

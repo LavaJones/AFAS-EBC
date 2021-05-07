@@ -1,0 +1,8 @@
+﻿Edit:
+<timeFrame-edit [timeFrame]="selectedTimeFrame" (timeFramesUpdated)="refreshTimeFrames()"> </timeFrame-edit>
+
+<button (click)="newItemClick(); $event.preventDefault()">New Item</button>
+
+<li *ngFor="let frame of timeFrames" (click)="itemClick(frame); $event.preventDefault()">
+Year: {{ frame.Year }} Month: {{ frame.Month }}
+</li>

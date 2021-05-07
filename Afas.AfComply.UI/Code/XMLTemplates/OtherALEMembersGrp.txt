@@ -1,0 +1,9 @@
+﻿<OtherALEMembersGrp>
+	<BusinessName>
+		<BusinessNameLine1Txt>@@OtherALEBusinessNameLine1Txt@@</BusinessNameLine1Txt>
+		<BusinessNameLine2Txt>@@OtherALEBusinessNameLine2Txt@@</BusinessNameLine2Txt>
+	</BusinessName>
+	<BusinessNameControlTxt>@@OtherALEBusinessNameControlTxt@@</BusinessNameControlTxt>
+	<irs:TINRequestTypeCd>BUSINESS_TIN</irs:TINRequestTypeCd>
+	<irs:EIN>@@OtherALEEIN@@</irs:EIN>
+</OtherALEMembersGrp>

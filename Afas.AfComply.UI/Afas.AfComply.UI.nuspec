@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Afas.AfComply.UI</id>
+        <version>$version$</version>
+        <authors>confadmin</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>ACA compliance tracking and reporting application.</description>
+    </metadata>
+    <files>
+        <file src="admin\**" target="admin" />
+        <file src="App_Code\**" target="App_Code" />
+        <file src="App_Data\**" target="App_Data" />        
+        <file src="Areas\**" target="Areas" />        
+        <file src="css\**" target="css" />        
+        <file src="bin\**" target="bin" />
+        <file src="client_content\**" target="client_content" />
+        <file src="Code\XMLTemplates\**" target="Code\XMLTemplates" />
+        <file src="images\**" target="images" />
+        <file src="design\**" target="design" />
+        <file src="Scripts\**" target="Scripts" />
+        <file src="ftps\**" target="ftps" />        
+        <file src="irs_submission\**" target="irs_submission" />
+        <file src="registration\**" target="registration" />
+        <file src="securepages\**" target="securepages" />                
+        <file src="Installers\**" target="Installers" />
+        <file src="Plumbing\**" target="Plumbing" />
+        <file src="SQL\**" target="SQL" />
+        <file src="status-check\**" target="status-check" />
+        <file src="webservices\**" target="webservices" />
+        <file src="_js\**" target="_js" />
+        <file src="Default.aspx" target="Default.aspx" />
+        <file src="Default.aspx.cs" target="Default.aspx.cs" />
+        <file src="default.css" target="default.css" />
+        <file src="Error.aspx" target="Error.aspx" />
+        <file src="Error.aspx.cs" target="Error.aspx.cs" />
+        <file src="Global.asax" target="Global.asax" />
+        <file src="log4net.config" target="log4net.config" />
+        <file src="log4net.Release.config" target="log4net.Release.config" />
+        <file src="Logout.aspx" target="Logout.aspx" />
+        <file src="Logout.aspx.cs" target="Logout.aspx.cs" />
+        <file src="menu.css" target="menu.css" />
+        <file src="password.css" target="password.css" />
+        <file src="vwd.webinfo" target="vwd.webinfo" />
+        <file src="v_menu.css" target="v_menu.css" />
+        <file src="dependencies.config" target="dependencies.config" />
+        <file src="Web.config" target="Web.config" />
+        <file src="Web.Debug.config" target="Web.Debug.config" />
+        <file src="Web.Release.config" target="Web.Release.config" />
+        <file src="Content\**" target="Content" />
+		<file src="alerts.css" target="alerts.css" />
+		<file src="Body.css" target="Body.css" />
+		<file src="edit_employee.css" target="edit_employee.css" />
+		<file src="employee.css" target="employee.css" />
+        <file src="employer_setup.css" target="employer_setup.css" />
+        <file src="leftnav.css" target="leftnav.css" />
+        <file src="reporting.css" target="reporting.css" />
+		 <file src="Forgotpassword.aspx" target="Forgotpassword.aspx" />
+        <file src="Forgotpassword.aspx.cs" target="Forgotpassword.aspx.cs" />
+		 <file src="ForgotUsername.aspx" target="ForgotUsername.aspx" />
+        <file src="ForgotUsername.aspx.cs" target="ForgotUsername.aspx.cs" />
+		<file src="reports.css" target="reports.css" />
+		<file src="questionnaire.css" target="questionnaire.css" />
+		
+		
+		
+    </files>
+</package>

@@ -1,0 +1,14 @@
+﻿<div *ngIf="timeFrame">
+    <div>
+        <label>Year: </label>
+        <input type="number" [(ngModel)]="timeFrame.Year" placeholder="Year" />
+        <br />
+        <label>Month: </label>
+        <input type="number" [(ngModel)]="timeFrame.Month" placeholder="Month" />
+    </div>
+    <div>
+        <button *ngIf="!timeFrame.ThisUrlParameter || timeFrame.ThisUrlParameter == ''" (click)="addItemClick(); $event.preventDefault()">Add</button>
+        <button *ngIf="timeFrame.ThisUrlParameter && timeFrame.ThisUrlParameter != ''" (click)="updateItemClick(); $event.preventDefault()">Update</button>
+        <button *ngIf="timeFrame.ThisUrlParameter && timeFrame.ThisUrlParameter != ''" (click)="deleteItemClick(); $event.preventDefault()">Delete</button>
+    </div>
+</div>

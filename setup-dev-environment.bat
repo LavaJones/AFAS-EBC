@@ -1,0 +1,1 @@
+@ExternalTools\nant\nant.exe -buildfile:default.build -l:build-log.txt dev-env

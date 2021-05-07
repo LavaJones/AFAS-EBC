@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6C8BB7BC-BA3A-4F90-85EE-125F0EB423D1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Afas.AfComply.Reporting</RootNamespace>
+    <AssemblyName>Afas.AfComply.Reporting</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Afc.Core">
+      <HintPath>..\packages\Afc.Core.2.0.10.0\lib\net40\Afc.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Afc.Framework">
+      <HintPath>..\packages\Afc.Framework.2.0.6.0\lib\net40\Afc.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Afc.Marketing.Core, Version=4.1.0.103, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Afc.Marketing.Core.4.1.0.103\lib\net45\Afc.Marketing.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper.Net4, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Core, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.3.2.2\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Facilities.Logging, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.LoggingFacility.3.2.0\lib\net45\Castle.Facilities.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Services.Logging.Log4netIntegration, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core-log4net.3.2.0\lib\net45\Castle.Services.Logging.Log4netIntegration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Windsor.3.2.1\lib\net45\Castle.Windsor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\ProjectArtifacts\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Application\FileCabinetServices\FileCabinetAccessService.cs" />
+    <Compile Include="Application\FileCabinetServices\FileCabinetFolderInfoService.cs" />
+    <Compile Include="Application\FileCabinetServices\FileCabinetInfoService.cs" />
+    <Compile Include="Application\FileCabinetServices\IFileCabinetAccessService.cs" />
+    <Compile Include="Application\FileCabinetServices\IFileCabinetFolderInfoService.cs" />
+    <Compile Include="Application\FileCabinetServices\IFileCabinetInfoService.cs" />
+    <Compile Include="Application\IFinalize1094Service.cs" />
+    <Compile Include="Application\IFinalize1095Service.cs" />
+    <Compile Include="Application\IPrint1095Service.cs" />
+    <Compile Include="Application\IUserReviewedService.cs" />
+    <Compile Include="Application\IUserEditPart2Service.cs" />
+    <Compile Include="Application\IPrintBatchService.cs" />
+    <Compile Include="Application\ITransmission1095Service.cs" />
+    <Compile Include="Application\ITimeFrameService.cs" />
+    <Compile Include="Application\IV1094InitialPart1Service.cs" />
+    <Compile Include="Application\IV1094InitialPart2Service.cs" />
+    <Compile Include="Application\IV1094InitialPart3Service.cs" />
+    <Compile Include="Application\IV1094InitialPart4Service.cs" />
+    <Compile Include="Application\Services\Finalize1094Service.cs" />
+    <Compile Include="Application\Services\Print1095Service.cs" />
+    <Compile Include="Application\Services\PrintFileGenerator.cs" />
+    <Compile Include="Application\Services\Finalize1095Service.cs" />
+    <Compile Include="Application\Services\LegacyServices\ILegacyClassifictaionService.cs" />
+    <Compile Include="Application\Services\LegacyServices\ILegacyEmployeeService.cs" />
+    <Compile Include="Application\Services\LegacyServices\ILegacyService.cs" />
+    <Compile Include="Application\Services\LegacyServices\LegacyClassifictaionService.cs" />
+    <Compile Include="Application\Services\LegacyServices\LegacyEmployeeService.cs" />
+    <Compile Include="Application\Services\LegacyServices\LegacyService.cs" />
+    <Compile Include="Application\Ssis\ISsisFileTransferService.cs" />
+    <Compile Include="Application\Services\UserReviewedService.cs" />
+    <Compile Include="Application\Services\UserEditPart2Service.cs" />
+    <Compile Include="Application\Services\PrintBatchService.cs" />
+    <Compile Include="Application\Services\Transmission1095Service.cs" />
+    <Compile Include="Application\Services\TimeFrameService.cs" />
+    <Compile Include="Application\Services\V1094InitialPart1Service.cs" />
+    <Compile Include="Application\Services\V1094InitialPart2Service.cs" />
+    <Compile Include="Application\Services\V1094InitialPart3Service.cs" />
+    <Compile Include="Application\Services\V1094InitialPart4Service.cs" />
+    <Compile Include="Application\Ssis\SsisFileTransferService.cs" />
+    <Compile Include="Domain\Approvals\Approved1094FinalPart1.cs" />
+    <Compile Include="Domain\Approvals\Approved1094FinalPart1QuerableExtensionMethods.cs" />
+    <Compile Include="Domain\Approvals\Approved1094FinalPart1Repository.cs" />
+    <Compile Include="Domain\Approvals\ApprovedEmployer.cs" />
+    <Compile Include="Domain\FileCabinet\FileCabinetAccess.cs" />
+    <Compile Include="Domain\FileCabinet\FileCabinetAccessQuerableExtensionMethods.cs" />
+    <Compile Include="Domain\FileCabinet\FileCabinetAccessRepository.cs" />
+    <Compile Include="Domain\FileCabinet\FileCabinetFolderInfo.cs" />
+    <Compile Include="Domain\FileCabinet\FileCabinetFolderInfoQuerableExtensionMethod.cs" />
+    <Compile Include="Domain\FileCabinet\FileCabinetFolderInfoRepository.cs" />
+    <Compile Include="Domain\FileCabinet\FileCabinetInfo.cs" />
+    <Compile Include="Domain\FileCabinet\FileCabinetInfoQuerableExtensionMethods.cs" />
+    <Compile Include="Domain\FileCabinet\FileCabinetRepository.cs" />
+    <Compile Include="Domain\FileCabinet\IFileCabinetAccessRepository.cs" />
+    <Compile Include="Domain\FileCabinet\IFileCabinetFolderInfoRepository.cs" />
+    <Compile Include="Domain\FileCabinet\IFileCabinetRepository.cs" />
+    <Compile Include="Domain\Approvals\Finalize1094Repository.cs" />
+    <Compile Include="Domain\Approvals\IFinalize1094Repository.cs" />
+    <Compile Include="Domain\Approvals\IV1094InitialPart3Repository.cs" />
+    <Compile Include="Domain\Approvals\SsisFileTransfer\ISsisFileTransferRepository.cs" />
+    <Compile Include="Domain\Approvals\SsisFileTransfer\SsisFileTransfer.cs" />
+    <Compile Include="Domain\Approvals\SsisFileTransfer\SsisFileTransferQuerableExtensionMethods.cs" />
+    <Compile Include="Domain\Approvals\SsisFileTransfer\SsisFileTransferRepository.cs" />
+    <Compile Include="Domain\Approvals\V1094InitialPart2Repository.cs" />
+    <Compile Include="Domain\Approvals\Approved1094FinalPart3.cs" />
+    <Compile Include="Domain\Approvals\Approved1094FinalPart4.cs" />
+    <Compile Include="Domain\Approvals\V1094InitialPart3Repository.cs" />
+    <Compile Include="Domain\Approvals\V1094InitialPart4Repository.cs" />
+    <Compile Include="Domain\Approvals\IApproved1094FinalPart1Repository.cs" />
+    <Compile Include="Domain\Approvals\Approved1095FinalQuerableExtensionMethods.cs" />
+    <Compile Include="Domain\Approvals\Approved1095FinalPart2.cs" />
+    <Compile Include="Domain\Approvals\Approved1095FinalPart3.cs" />
+    <Compile Include="Domain\Approvals\Approved1095Final.cs" />
+    <Compile Include="Domain\Approvals\Approved1095Initial.cs" />
+    <Compile Include="Domain\Approvals\Finalize1095Repository.cs" />
+    <Compile Include="Domain\Approvals\IV1094InitialPart2Repository.cs" />
+    <Compile Include="Domain\Approvals\IV1094InitialPart4Repository.cs" />
+    <Compile Include="Domain\Approvals\IFinalize1095Repository.cs" />
+    <Compile Include="Domain\Approvals\IV1094InitialPart1Repository.cs" />
+    <Compile Include="Domain\Approvals\V1094InitialPart1.cs" />
+    <Compile Include="Domain\Approvals\V1094InitialPart1Repository.cs" />
+    <Compile Include="Domain\Approvals\V1094InitialPart2.cs" />
+    <Compile Include="Domain\Approvals\V1094InitialPart3.cs" />
+    <Compile Include="Domain\Approvals\V1094InitialPart4.cs" />
+    <Compile Include="Domain\InsuranceChangeEvent\InsuranceChangeEvent.cs" />
+    <Compile Include="Domain\InsuranceChangeEvent\IInsuranceChangeEventRepository.cs" />
+    <Compile Include="Domain\InsuranceChangeEvent\InsuranceChangeEventRepository.cs" />
+    <Compile Include="Domain\LegacyDataCode\employee.cs" />
+    <Compile Include="Domain\LegacyDataCode\View_air_replacement_EmployeeYearlyDetails.cs" />
+    <Compile Include="Domain\LegacyDataCode\View_air_replacement_EmployeeMonthlyDetailsPreFiltered.cs" />
+    <Compile Include="Domain\LegacyData\employee.cs">
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\EmployeeMeasurementAverageHour.cs">
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\employee_dependents.cs">
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\employee_insurance_offer.cs">
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\employer.cs">
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\EmployerTaxYearTransmission.cs">
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\EmployerTaxYearTransmissionStatu.cs">
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\insurance.cs">
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\insurance_carrier.cs">
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\insurance_contribution.cs">
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\insurance_coverage.cs">
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\insurance_coverage_editable.cs">
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\LegacyData.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LegacyData.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\LegacyData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\LegacyData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LegacyData.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\plan_year.cs">
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\View_1094Part1.cs">
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\View_1094Part2.cs">
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\View_1094Part3.cs">
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\View_1094Part4.cs">
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\View_air_replacement_EmployeeMonthlyDetailsPreFiltered.cs">
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\View_air_replacement_EmployeeYearlyDetails.cs">
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\View_air_replacement_employee_monthly_detail.cs">
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\View_air_replacement_PartIII_details.cs">
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\View_full_insurance_coverage.cs">
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\View_insurance_change_events.cs">
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\LegacyData\View_insurance_change_events_details.cs">
+      <DependentUpon>LegacyData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\MonthlyDetails\1094MonthlyDetails.cs" />
+    <Compile Include="Domain\MonthlyDetails\1095MonthlyDetails.cs" />
+    <Compile Include="Domain\InsuranceChangeEvent\InsuranceChangeEventQuerableExtensionMethods.cs" />
+    <Compile Include="Domain\Printing\Print1094QuerableExtensionMethods.cs" />
+    <Compile Include="Domain\Printing\Print1094Repository.cs" />
+    <Compile Include="Domain\Printing\IPrint1094Repository.cs" />
+    <Compile Include="Domain\Printing\Print1094.cs" />
+    <Compile Include="Domain\Corrections\ICorrection1094Repository.cs" />
+    <Compile Include="Domain\Corrections\Correction1094.cs" />
+    <Compile Include="Domain\Printing\IPrint1095Repository.cs" />
+    <Compile Include="Domain\Printing\IPrintBatchRepository.cs" />
+    <Compile Include="Domain\Printing\Print1095.cs" />
+    <Compile Include="Domain\Printing\Print1095QuerableExtensionMethods.cs" />
+    <Compile Include="Domain\Printing\Print1095Repository.cs" />
+    <Compile Include="Domain\Printing\PrintBatch.cs" />
+    <Compile Include="Domain\Corrections\Correction1095.cs" />
+    <Compile Include="Domain\Corrections\ICorrection1095Repository.cs" />
+    <Compile Include="Domain\Printing\PrintBatchQuerableExtensionMethods.cs" />
+    <Compile Include="Domain\Printing\PrintBatchRepository.cs" />
+    <Compile Include="Domain\Reporting\IUserReviewedRepository.cs" />
+    <Compile Include="Domain\Reporting\IUserEditPart2Repository.cs" />
+    <Compile Include="Domain\Reporting\UserEditPart2.cs" />
+    <Compile Include="Domain\Reporting\UserReviewedRepository.cs" />
+    <Compile Include="Domain\Reporting\UserReviewedExtensionMethod.cs" />
+    <Compile Include="Domain\Reporting\UserReviewed.cs" />
+    <Compile Include="Domain\Reporting\UserEditPart2ExtensionMethod.cs" />
+    <Compile Include="Domain\Reporting\UserEditPart2Repository.cs" />
+    <Compile Include="Domain\Transmission\ITransmission1094Repository.cs" />
+    <Compile Include="Domain\Transmission\ITransmission1095Repository.cs" />
+    <Compile Include="Domain\Transmission\Transmission1094.cs" />
+    <Compile Include="Domain\Transmission\Transmission1095.cs" />
+    <Compile Include="Domain\BaseReportingModel.cs" />
+    <Compile Include="Domain\CustomSqlCodeGenerator.cs" />
+    <Compile Include="Domain\IReportingDataContext.cs" />
+    <Compile Include="Domain\ReportingDataContext.cs" />
+    <Compile Include="Domain\TimeFrames\ITimeFrameRepository.cs" />
+    <Compile Include="Domain\TimeFrames\TimeFrame.cs" />
+    <Compile Include="Domain\TimeFrames\TimeFrameQuerableExtensionMethods.cs" />
+    <Compile Include="Domain\TimeFrames\TimeFrameRepository.cs" />
+    <Compile Include="Domain\Transmission\Transmission1094QuerableExtensionMethods.cs" />
+    <Compile Include="Domain\Transmission\Transmission1095QuerableExtensionMethods.cs" />
+    <Compile Include="Domain\Transmission\Transmission1094Repository.cs" />
+    <Compile Include="Domain\Transmission\Transmission1095Repository.cs" />
+    <Compile Include="Domain\Transmission\TransmissionStatus.cs" />
+    <Compile Include="Domain\Transmission\TransmissionTypes.cs" />
+    <Compile Include="Domain\Voids\IVoid1094Repository.cs" />
+    <Compile Include="Domain\Voids\IVoid1095Repository.cs" />
+    <Compile Include="Domain\Voids\Void1094QuerableExtensionMethods.cs" />
+    <Compile Include="Domain\Voids\Void1094Repository.cs" />
+    <Compile Include="Domain\Voids\Void1094.cs" />
+    <Compile Include="Domain\Voids\Void1095.cs" />
+    <Compile Include="Domain\Voids\Void1095QuerableExtensionMethods.cs" />
+    <Compile Include="Domain\Voids\Void1095Repository.cs" />
+    <Compile Include="Mapping.cs" />
+    <Compile Include="Migrations\201709271415398_00001-Afas-AFcomply.cs" />
+    <Compile Include="Migrations\201709271415398_00001-Afas-AFcomply.Designer.cs">
+      <DependentUpon>201709271415398_00001-Afas-AFcomply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712192128238_00002-Afas-AFcomply.cs" />
+    <Compile Include="Migrations\201712192128238_00002-Afas-AFcomply.Designer.cs">
+      <DependentUpon>201712192128238_00002-Afas-AFcomply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712261441369_00003-Afas-AFcomply.cs" />
+    <Compile Include="Migrations\201712261441369_00003-Afas-AFcomply.Designer.cs">
+      <DependentUpon>201712261441369_00003-Afas-AFcomply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712271634532_00004-Afas-AFcomply.cs" />
+    <Compile Include="Migrations\201712271634532_00004-Afas-AFcomply.Designer.cs">
+      <DependentUpon>201712271634532_00004-Afas-AFcomply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712271846453_00005-Afas-AFcomply.cs" />
+    <Compile Include="Migrations\201712271846453_00005-Afas-AFcomply.Designer.cs">
+      <DependentUpon>201712271846453_00005-Afas-AFcomply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712291757386_00006-Afas-AFcomply.cs" />
+    <Compile Include="Migrations\201712291757386_00006-Afas-AFcomply.Designer.cs">
+      <DependentUpon>201712291757386_00006-Afas-AFcomply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801020109518_00007-Afas-AFcomply.cs" />
+    <Compile Include="Migrations\201801020109518_00007-Afas-AFcomply.Designer.cs">
+      <DependentUpon>201801020109518_00007-Afas-AFcomply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801020609087_00008-Afas-AFcomply.cs" />
+    <Compile Include="Migrations\201801020609087_00008-Afas-AFcomply.Designer.cs">
+      <DependentUpon>201801020609087_00008-Afas-AFcomply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801030654427_00009-Afas-AFcomply.cs" />
+    <Compile Include="Migrations\201801030654427_00009-Afas-AFcomply.Designer.cs">
+      <DependentUpon>201801030654427_00009-Afas-AFcomply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801312210428_00010-Afas-AFcomply.cs" />
+    <Compile Include="Migrations\201801312210428_00010-Afas-AFcomply.Designer.cs">
+      <DependentUpon>201801312210428_00010-Afas-AFcomply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802121550215_00011-Afas-AFcomply.cs" />
+    <Compile Include="Migrations\201802121550215_00011-Afas-AFcomply.Designer.cs">
+      <DependentUpon>201802121550215_00011-Afas-AFcomply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802142120389_00012-Afas-AFcomply.cs" />
+    <Compile Include="Migrations\201802142120389_00012-Afas-AFcomply.Designer.cs">
+      <DependentUpon>201802142120389_00012-Afas-AFcomply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803021657245_00014-Afas-AFcomply.cs" />
+    <Compile Include="Migrations\201803021657245_00014-Afas-AFcomply.Designer.cs">
+      <DependentUpon>201803021657245_00014-Afas-AFcomply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803081545578_00015-Afas-AFcomply.cs" />
+    <Compile Include="Migrations\201803081545578_00015-Afas-AFcomply.Designer.cs">
+      <DependentUpon>201803081545578_00015-Afas-AFcomply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905222232571_00016-Afas-AFcomply.cs" />
+    <Compile Include="Migrations\201905222232571_00016-Afas-AFcomply.Designer.cs">
+      <DependentUpon>201905222232571_00016-Afas-AFcomply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906121853490_00017-Afas-AFcomply.cs" />
+    <Compile Include="Migrations\201906121853490_00017-Afas-AFcomply.Designer.cs">
+      <DependentUpon>201906121853490_00017-Afas-AFcomply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="Domain\LegacyData\LegacyData.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LegacyData.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Domain\LegacyData\LegacyData.edmx.diagram">
+      <DependentUpon>LegacyData.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201709271415398_00001-Afas-AFcomply.resx">
+      <DependentUpon>201709271415398_00001-Afas-AFcomply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712192128238_00002-Afas-AFcomply.resx">
+      <DependentUpon>201712192128238_00002-Afas-AFcomply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712261441369_00003-Afas-AFcomply.resx">
+      <DependentUpon>201712261441369_00003-Afas-AFcomply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712271634532_00004-Afas-AFcomply.resx">
+      <DependentUpon>201712271634532_00004-Afas-AFcomply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712271846453_00005-Afas-AFcomply.resx">
+      <DependentUpon>201712271846453_00005-Afas-AFcomply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712291757386_00006-Afas-AFcomply.resx">
+      <DependentUpon>201712291757386_00006-Afas-AFcomply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801020109518_00007-Afas-AFcomply.resx">
+      <DependentUpon>201801020109518_00007-Afas-AFcomply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801020609087_00008-Afas-AFcomply.resx">
+      <DependentUpon>201801020609087_00008-Afas-AFcomply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801030654427_00009-Afas-AFcomply.resx">
+      <DependentUpon>201801030654427_00009-Afas-AFcomply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801312210428_00010-Afas-AFcomply.resx">
+      <DependentUpon>201801312210428_00010-Afas-AFcomply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802121550215_00011-Afas-AFcomply.resx">
+      <DependentUpon>201802121550215_00011-Afas-AFcomply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802142120389_00012-Afas-AFcomply.resx">
+      <DependentUpon>201802142120389_00012-Afas-AFcomply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803021657245_00014-Afas-AFcomply.resx">
+      <DependentUpon>201803021657245_00014-Afas-AFcomply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803081545578_00015-Afas-AFcomply.resx">
+      <DependentUpon>201803081545578_00015-Afas-AFcomply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905222232571_00016-Afas-AFcomply.resx">
+      <DependentUpon>201905222232571_00016-Afas-AFcomply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906121853490_00017-Afas-AFcomply.resx">
+      <DependentUpon>201906121853490_00017-Afas-AFcomply.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Afas\Afas.csproj">
+      <Project>{f1c8c3d8-94da-403e-a5e7-a9c58486deed}</Project>
+      <Name>Afas</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Afas.AfComply.Reporting.Core\Afas.AfComply.Reporting.Core.csproj">
+      <Project>{3B984996-6CF8-4948-82FD-34D50610EC02}</Project>
+      <Name>Afas.AfComply.Reporting.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Afas.AfComply\Afas.AfComply.csproj">
+      <Project>{54AF3C84-E6CB-46DA-83E5-0006BC6BBFDC}</Project>
+      <Name>Afas.AfComply</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Domain\LegacyData\LegacyData.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LegacyData.edmx</DependentUpon>
+      <LastGenOutput>LegacyData.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Domain\LegacyData\LegacyData.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LegacyData.edmx</DependentUpon>
+      <LastGenOutput>LegacyData.cs</LastGenOutput>
+    </Content>
+    <Content Include="Migrations\SQL\201709271415398_00001-Afas-AFcomply.sql" />
+    <Content Include="Migrations\SQL\201712192128238_00002-Afas-AFcomply.sql" />
+    <Content Include="Migrations\SQL\201712261441369_00003-Afas-AFcomply.sql" />
+    <Content Include="Migrations\SQL\201712271634532_00004-Afas-AFcomply.sql" />
+    <Content Include="Migrations\SQL\201712271846453_00005-Afas-AFcomply.sql" />
+    <Content Include="Migrations\SQL\201712291757386_00006-Afas-AFcomply.sql" />
+    <Content Include="Migrations\SQL\201801020109518_00007-Afas-AFcomply.sql" />
+    <Content Include="Migrations\SQL\201801020609087_00008-Afas-AFcomply.sql" />
+    <Content Include="Migrations\SQL\201801030654427_00009-Afas-AFcomply.sql" />
+    <Content Include="Migrations\SQL\201801312210428_00010-Afas-AFcomply.sql" />
+    <Content Include="Migrations\SQL\201802121550215_00011-Afas-AFcomply.sql" />
+    <Content Include="Migrations\SQL\201802142120389_00012-Afas-AFcomply.sql" />
+    <Content Include="Migrations\SQL\201803081545578_00015-Afas-AFcomply.sql" />
+    <Content Include="Migrations\SQL\201905222232571_00016-Afas-AFcomply.sql" />
+    <Content Include="Migrations\SQL\201906121853490_00017-Afas-AFcomply.sql" />
+    <Content Include="Migrations\SQL\Full.sql" />
+    <Content Include="Migrations\SQL\ManualTriggerForUpdate.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
+  <Import Project="..\packages\OctoPack.3.0.42\tools\OctoPack.targets" Condition="Exists('..\packages\OctoPack.3.0.42\tools\OctoPack.targets')" />
+  <Target Name="EnsureOctoPackImported" BeforeTargets="BeforeBuild" Condition="'$(OctoPackImported)' == ''">
+    <Error Condition="!Exists('..\packages\OctoPack.3.0.42\tools\OctoPack.targets') And ('$(RunOctoPack)' != '' And $(RunOctoPack))" Text="You are trying to build with OctoPack, but the NuGet targets file that OctoPack depends on is not available on this computer. This is probably because the OctoPack package has not been committed to source control, or NuGet Package Restore is not enabled. Please enable NuGet Package Restore to download them. For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\OctoPack.3.0.42\tools\OctoPack.targets') And ('$(RunOctoPack)' != '' And $(RunOctoPack))" Text="OctoPack cannot be run because NuGet packages were restored prior to the build running, and the targets file was unavailable when the build started. Please build the project again to include these packages in the build. You may also need to make sure that your build server does not delete packages prior to each build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

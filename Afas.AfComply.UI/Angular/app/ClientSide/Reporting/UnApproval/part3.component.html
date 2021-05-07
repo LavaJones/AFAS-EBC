@@ -1,0 +1,86 @@
+﻿<div *ngIf="part3">
+    <hr />
+    <table style="width: 100%; table-layout: fixed; background-color:cornsilk;">
+        <tr style="font-weight: bold; font-size: 10px;">
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+            <th style="width:6%;"></th>
+        </tr>
+
+        <tr style="font-weight: bold; font-size: 10px; vertical-align: top;">
+            <td colspan="3">
+                {{part3.FirstName}} {{part3.MiddleName}} {{part3.LastName}}
+            </td>
+            <td colspan="3">{{part3.Ssn}}</td>
+            <td colspan="3">{{part3.Dob| date:'shortDate' }}</td>
+            <td colspan="4"></td>
+        </tr>
+
+        <tr style="background-color: lightgray; font-weight:bold; font-size:10px;">
+            <td colspan="3"></td>
+            <td>January</td>
+            <td>February</td>
+            <td>March</td>
+            <td>April</td>
+            <td>May</td>
+            <td>June</td>
+            <td>July</td>
+            <td>August</td>
+            <td>September</td>
+            <td>October</td>
+            <td>November</td>
+            <td>December</td>
+        </tr>
+        <tr>
+            <td colspan="3"><span style="font-weight:bold; font-size:10px;">Enrolled</span></td>
+            <td>
+                <input type="checkbox" [ngModel]="part3.Enrolled[0]" disabled />
+            </td>
+            <td>
+                <input type="checkbox" [ngModel]="part3.Enrolled[1]" disabled />
+            </td>
+            <td>
+                <input type="checkbox" [ngModel]="part3.Enrolled[2]" disabled />
+            </td>
+            <td>
+                <input type="checkbox" [ngModel]="part3.Enrolled[3]" disabled />
+            </td>
+            <td>
+                <input type="checkbox" [ngModel]="part3.Enrolled[4]" disabled />
+            </td>
+            <td>
+                <input type="checkbox" [ngModel]="part3.Enrolled[5]" disabled />
+            </td>
+            <td>
+                <input type="checkbox" [ngModel]="part3.Enrolled[6]" disabled />
+            </td>
+            <td>
+                <input type="checkbox" [ngModel]="part3.Enrolled[7]" disabled />
+            </td>
+            <td>
+                <input type="checkbox" [ngModel]="part3.Enrolled[8]" disabled />
+            </td>
+            <td>
+                <input type="checkbox" [ngModel]="part3.Enrolled[9]" disabled />
+            </td>
+            <td>
+                <input type="checkbox" [ngModel]="part3.Enrolled[10]" disabled />
+            </td>
+            <td>
+                <input type="checkbox" [ngModel]="part3.Enrolled[11]" disabled />
+            </td>
+        </tr>
+    </table>
+</div>

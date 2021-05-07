@@ -1,0 +1,57 @@
+﻿<div>
+         <table>
+            <tr>
+                <td style="width:78%; text-align:left; padding:0;">
+                    <h1>Welcome to the Status & Action Portal</h1>
+
+                </td>
+            </tr>
+        </table>
+        <h2 style="font-size:18px;">Completing your 1095-C and 1094-C Reporting Process </h2>
+        <p>
+            There are seven steps to review, approve, and have your 1095-C Forms mailed to employees and copies filed with the IRS.
+            You can return to this page to check the status as you move through the steps below.
+        </p>
+        
+    
+        <p>
+            <span style="font-weight:bold">Helpful Guide:</span> To get started, we strongly encourage you to download and print our
+            <a href="{{ Feature.IrsInstructionsLink2017 }}">detailed instruction guide</a> and keep it at hand as you complete each of the following steps.
+            <a href="{{ Feature.IrsInstructionsPDFLink }}">A PDF instruction guide</a> and keep it at hand as you complete each of the following steps.
+        </p>
+
+
+        <p>
+            <span style="font-weight:bold">Important Note about Timing:</span>All steps must be completed no later than {{ Branding.IrsDeadlineCertify }} in order to ensure your 1095-C forms are mailed by the IRS deadline.
+            As such, we recommend you complete the first two steps (through completion of the Questionnaire linked below) as soon as possible and no later than {{ Branding.IrsDeadlineSetup }}.
+            If you do not complete Steps 1 and 2 by {{ Branding.IrsDeadlineSetup }}, we cannot guarantee your forms will be mailed by the IRS deadline,
+            which can result in late filing penalties for your organization.
+        </p>
+
+        <table>
+            <colgroup>
+                <col style="width:25%" />
+                <col style="width:25%;" />
+                <col style="width:150%" />
+            </colgroup>
+            <thead style="color:black;background-color:#eb0029;">
+                <tr>
+                    <td><span style="color:White;font-weight:bold">Step</span></td>
+                    <td><span style="color:White;font-weight:bold">Status</span></td>
+                    <td><span style="color:white;font-weight:bold">Instructions</span></td>
+                </tr>
+            </thead>
+            <tr *ngFor="let step of irsVerification">
+                <td>
+                    {{step.Step}}
+                </td>
+                <td>
+                    <span [ngStyle]="{'color': step.Status ? 'black' : 'red'}" [innerHTML]="step.StatusString | sanitizeHtml"></span> 
+
+                </td>
+                <td>
+                    <span [innerHTML]="step.Instructions | sanitizeHtml"></span>
+                </td>
+            </tr>
+        </table>
+</div>

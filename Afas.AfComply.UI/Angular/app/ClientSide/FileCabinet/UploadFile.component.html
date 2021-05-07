@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>Upload File</h1>
+    <br />
+    <mat-form-field hintLabel="Max 20 characters">
+        <input matInput #input maxlength="20" [(ngModel)]="fileName" placeholder="Enter File name">
+        <mat-hint align="end">{{input.value?.length || 0}}/20</mat-hint>
+    </mat-form-field>
+    <p style="color: #eb0029; font-size:10px;">{{ValidationMessage}}</p>
+    <br />
+    <label>
+        File Description:
+    </label>
+    <br />
+    <textarea id="fileDescription" rows="10" cols="30" #FileDescriptionInput maxlength="1000" [(ngModel)]="fileDescription" required></textarea>
+    <p style="font-size:12px;">Max 1000 characters &nbsp; &nbsp; &nbsp; {{FileDescriptionInput.value?.length || 0}}/1000</p>
+    <br />
+    <input id="uploadFile" type="file" value="ChooseFile" (change)="onUploadFile($event)" />
+    <p style="font-size:12px;">Certain types of files will be blocked (such as executable .EXE files)</p>
+    <br />
+    <br />
+    <button type="submit" (click)="onUpload()" class="btn" value="Upload">Upload File</button>
+    <br />
+  
+    <p style="color: #eb0029; font-size:12px;">{{ErrorMessage}}</p>
+    <br />
+    <button type="submit" (click)="onNoClick()" class="btn">Cancel</button>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿<GovtEntityEmployerInfoGrp>
+	<BusinessName>
+		<BusinessNameLine1Txt>@@GovtBusinessNameLine1Txt@@</BusinessNameLine1Txt>
+		<BusinessNameLine2Txt>@@GovtBusinessNameLine2Txt@@</BusinessNameLine2Txt>
+	</BusinessName>
+	<BusinessNameControlTxt>@@GovtBusinessNameControlTxt@@</BusinessNameControlTxt>
+	<irs:TINRequestTypeCd>BUSINESS_TIN</irs:TINRequestTypeCd>
+	<irs:EmployerEIN>@@GovtEmployerEIN@@</irs:EmployerEIN>
+	<MailingAddressGrp>
+		<USAddressGrp>
+			<AddressLine1Txt>@@GovtAddressLine1Txt@@</AddressLine1Txt>
+			<AddressLine2Txt>@@GovtAddressLine2Txt@@</AddressLine2Txt>
+			<irs:CityNm>@@GovtCityNm@@</irs:CityNm>
+			<USStateCd>@@GovtUSStateCd@@</USStateCd>
+			<irs:USZIPCd>@@GovtUSZIPCd@@</irs:USZIPCd>
+			<irs:USZIPExtensionCd>@@GovtUSZIPExtensionCd@@</irs:USZIPExtensionCd>
+		</USAddressGrp>
+	</MailingAddressGrp>
+	<ContactNameGrp>
+		<PersonFirstNm>@@GovtPersonFirstNm@@</PersonFirstNm>
+		<PersonMiddleNm>@@GovtPersonMiddleNm@@</PersonMiddleNm>
+		<PersonLastNm>@@GovtPersonLastNm@@</PersonLastNm>
+		<SuffixNm>@@GovtSuffixNm@@</SuffixNm>
+	</ContactNameGrp>
+	<ContactPhoneNum>@@GovtContactPhoneNum@@</ContactPhoneNum>
+</GovtEntityEmployerInfoGrp>
